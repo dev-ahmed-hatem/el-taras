@@ -1776,8 +1776,8 @@ footer .outro .copyright {
     }
 
     .discover .heading h3 {
-        font-size: 21px;
-        width: 220px;
+        font-size: 19px;
+        width: 240px;
         margin-bottom: 8px;
     }
 
@@ -1913,7 +1913,7 @@ footer .outro .copyright {
         transform: translateX(-50%);
         flex-wrap: wrap;
         height: 110px;
-        padding: 0 25px;
+        padding: 0 10px;
     }
 
     .decor-discover .slider {
@@ -1927,7 +1927,8 @@ footer .outro .copyright {
     }
 
     .decor-discover .heading h3 {
-        font-size: 20px;
+        font-size: 18px;
+        margin-right: 5px;
         margin-bottom: 15px;
         max-width: 180px;
         height: 100%;
