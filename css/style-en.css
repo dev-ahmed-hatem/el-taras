@@ -1565,7 +1565,7 @@ footer .outro .copyright {
     }
 }
 
-@media screen and (min-width: 390px) and (max-width: 799px) {
+@media screen and (min-width: 340px) and (max-width: 785px) {
     ::-webkit-scrollbar {
         background-color: #fff;
         width: 3px;
@@ -1597,26 +1597,26 @@ footer .outro .copyright {
 
     header {
         background-size: 105% 95%;
-        margin-bottom: 265px;
+        margin-bottom: 230px;
         background-image: linear-gradient(135deg, #0a80ca, #063b69);
         height: 250px;
     }
 
     header::before {
-        width: 150px;
-        height: 132px;
+        width: 125px;
+        height: 110px;
         top: 50%;
     }
 
     header .nav {
         height: 50px;
-        padding: 0 25px;
+        padding: 0 20px;
     }
 
     header .nav ul.links {
         width: 230px;
         font-size: 10px;
-        margin-left: 45px;
+        margin-left: 30px;
     }
 
     header .nav ul.links li::after {
@@ -1630,7 +1630,7 @@ footer .outro .copyright {
     }
 
     header .headings {
-        margin: 10px 30px 0;
+        margin: 0 25px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -1669,8 +1669,8 @@ footer .outro .copyright {
     }
 
     header .images {
-        width: 380px;
-        top: 150px;
+        width: 360px;
+        top: 130px;
         left: 50%;
         transform: translateX(-50%);
         align-items: center;
@@ -1687,7 +1687,7 @@ footer .outro .copyright {
 
     header .marks {
         width: 75%;
-        top: 160%;
+        top: 150%;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -1741,13 +1741,13 @@ footer .outro .copyright {
         width: 50px;
         position: absolute;
         top: 400px;
-        right: 115px;
+        right: 50px;
         margin-top: 0;
     }
 
     .discover {
         margin: 30px 0;
-        height: 550px;
+        height: 450px;
     }
 
     .discover .overlay {
@@ -1756,28 +1756,29 @@ footer .outro .copyright {
     }
 
     .discover .top-corner {
-        width: 200px;
+        width: 130px;
         top: 0;
         left: 0;
         transform: rotateZ(-90deg);
     }
 
     .discover .bottom-corner {
-        width: 200px;
+        width: 130px;
         top: 0;
         right: 0;
     }
 
     .discover .heading {
-        top: 10%;
-        right: 50%;
+        top: 5%;
+        right: 47%;
         transform: translateX(50%);
         height: 150px;
     }
 
     .discover .heading h3 {
-        font-size: 24px;
-        margin-bottom: 15px;
+        font-size: 22px;
+        width: 220px;
+        margin-bottom: 8px;
     }
 
     .discover .heading h3 br {
@@ -1785,9 +1786,9 @@ footer .outro .copyright {
     }
 
     .discover .heading p {
-        font-size: 12px;
+        font-size: 11px;
         width: 200px;
-        margin-bottom: 15px;
+        margin-bottom: 8px;
     }
 
     .discover .heading button {
@@ -1806,7 +1807,7 @@ footer .outro .copyright {
 
     .discover .slider {
         height: 300px;
-        top: 225px;
+        top: 160px;
         right: 0;
     }
 
@@ -1853,25 +1854,25 @@ footer .outro .copyright {
     }
 
     .decor-sec {
-        margin: 30px 0 110px;
-        height: 220px;
-        padding-top: 40px;
+        margin: 30px 0 100px;
+        height: 170px;
+        padding-top: 35px;
     }
 
     .decor-sec i {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
     }
 
     .decor-sec h2 {
-        font-size: 26px;
+        font-size: 22px;
     }
 
     .decor-sec img {
         width: 78%;
         max-width: 435px;
-        height: 200px;
-        top: 100px;
+        height: 160px;
+        top: 80px;
     }
 
     .features {
@@ -1902,12 +1903,12 @@ footer .outro .copyright {
     }
 
     .decor-discover {
-        height: 400px;
+        height: 360px;
         margin: 30px 0;
     }
 
     .decor-discover .heading {
-        width: 80%;
+        width: 100%;
         left: 50%;
         transform: translateX(-50%);
         flex-wrap: wrap;
@@ -1920,14 +1921,14 @@ footer .outro .copyright {
     }
 
     .decor-discover .slider img {
-        width: 343px;
-        height: 250px;
+        width: 302px;
+        height: 220px;
     }
 
     .decor-discover .heading h3 {
         font-size: 20px;
         margin-bottom: 15px;
-        width: 60%;
+        width: 180px;
         height: 100%;
     }
 
@@ -1962,15 +1963,15 @@ footer .outro .copyright {
     }
 
     footer {
-        padding: 20px 30px 10px;
+        padding: 15px 20px 10px;
     }
 
     footer .heading h2 {
-        font-size: 22px;
+        font-size: 21px;
     }
 
     footer .heading h4 {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     footer .footer-sep1,
@@ -1996,6 +1997,7 @@ footer .outro .copyright {
     footer .outro .links {
         width: 36%;
         height: 110px;
+        margin-right: 25px;
         margin-bottom: 0;
         font-size: 11px;
         flex-direction: column;
