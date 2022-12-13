@@ -1,0 +1,2048 @@
+@font-face {
+    font-family: "amaranth";
+    src: url(./Fonts/Amaranth-Regular.ttf);
+}
+
+@font-face {
+    font-family: "proxima";
+    src: url(./Fonts/Proxima\ Nova\ Font.otf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    background-color: #fff;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0076bf;
+    width: 5px;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #0076bf;
+    color: #000;
+    z-index: 100;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 80%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid transparent;
+}
+
+.scroll-to-top.active {
+    display: flex;
+}
+
+.scroll-to-top:hover {
+    background-color: transparent;
+    border: 2px solid #0076bf;
+}
+
+.scroll-to-top svg {
+    width: 25px;
+    height: 25px;
+}
+
+.scroll-to-top svg path {
+    transition: all 0.2s ease-in-out;
+}
+
+.scroll-to-top:hover svg path {
+    stroke: #0076bf;
+}
+
+/* X-large screen */
+
+header {
+    width: 100%;
+    height: 765px;
+    background-image: url("../media/Path\ 3.png");
+    background-position: -5px -5px;
+    background-size: 105% 90%;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+header::before {
+    content: "";
+    width: 484px;
+    height: 426px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    background-image: url("../media/decor.png");
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    opacity: 58%;
+    transform: translate(-50%, -50%) rotateZ(13deg);
+}
+
+header .nav {
+    height: 80px;
+    width: 100%;
+    padding: 0 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .nav ul.links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+    color: white;
+    font-family: amaranth;
+    font-size: 14px;
+    margin-left: 150px;
+}
+
+header .nav ul.links li {
+    cursor: pointer;
+    display: block;
+    position: relative;
+}
+
+header .nav ul.links li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 1px;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: all 0.15s ease-in-out;
+}
+
+header .nav ul.links li.active::after,
+header .nav ul.links li:hover::after {
+    width: 100%;
+}
+
+header .nav button {
+    outline: none;
+    border: none;
+    background-color: #ffc350;
+    width: 120px;
+    height: 35px;
+    font-family: amaranth;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+header .nav button:hover {
+    color: #ffc350;
+    border: 1px solid #ffc350;
+    background-color: transparent;
+}
+
+header .headings {
+    margin-left: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 550px;
+    height: 330px;
+    color: white;
+    font-family: Calibri;
+}
+
+header .headings div h1 {
+    font-size: 78px;
+}
+
+header .headings div h2 {
+    font-size: 43px;
+    font-style: italic;
+}
+
+header .headings h4 {
+    font-size: 26px;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+header .headings button {
+    width: 130px;
+    height: 35px;
+    background-color: #ffc350;
+    color: #0076bf;
+    font-family: Amaranth;
+    font-size: 17px;
+    border: transparent;
+    cursor: pointer;
+    box-shadow: -2px 2px 6px #636363;
+    transition: all 0.2s ease-in-out;
+}
+
+header .headings button:hover {
+    color: #ffc350;
+    border: 1px solid #ffc350;
+    background-color: transparent;
+}
+
+header .images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    position: absolute;
+    right: 0;
+    top: 90px;
+    justify-content: space-between;
+}
+header .images img:first-child {
+    width: 600px;
+    margin-bottom: 12px;
+}
+
+header .images img:not(:first-child) {
+    height: 305px;
+}
+
+header .marks {
+    width: 650px;
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 60%;
+    left: 140px;
+}
+
+header .marks div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .marks div.decor {
+    transform: translateY(50px);
+}
+
+header .marks div.guarantee {
+    transform: translateY(100px);
+}
+
+header .marks div img {
+    width: 85px;
+    height: 85px;
+    margin-bottom: 10px;
+}
+
+header .marks div span {
+    width: 85px;
+    text-align: center;
+}
+
+.separator {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #ffc350;
+    width: 60%;
+    height: 5px;
+    border-radius: 10px;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto;
+    width: 95%;
+    max-width: 1444px;
+}
+
+.intro .door {
+    width: 450px;
+}
+
+.intro div {
+    width: 650px;
+}
+
+.intro div h3 {
+    color: #0076bf;
+    font-family: Calibri;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.intro div p {
+    margin-bottom: 20px;
+    font-family: "proxima";
+    font-size: 20px;
+    text-align: justify;
+}
+
+.intro .icon {
+    width: 150px;
+    margin-top: 125px;
+}
+
+.discover {
+    margin: 60px 0;
+    position: relative;
+    height: 550px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 200px;
+}
+
+.discover .overlay {
+    position: absolute;
+    width: 625px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+.discover .top-corner {
+    position: absolute;
+    top: 0;
+    right: -4px;
+    width: 450px;
+    z-index: 3;
+}
+
+.discover .bottom-corner {
+    position: absolute;
+    bottom: -8px;
+    right: -50px;
+    width: 350px;
+    z-index: 2;
+}
+
+.discover .slider {
+    display: flex;
+    justify-content: space-between;
+    height: 550px;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    right: 625px;
+}
+
+.discover .slider img {
+    width: 290px;
+    height: 550px;
+    margin: 0 20px;
+}
+
+.discover .heading {
+    position: absolute;
+    right: 200px;
+    z-index: 5;
+}
+
+.discover .heading h3 {
+    font-size: 50px;
+    font-family: Calibri;
+    color: #0076bf;
+    margin-bottom: 30px;
+}
+
+.discover .heading p {
+    font-size: 23px;
+    font-family: proxima;
+    margin-bottom: 30px;
+    opacity: 50%;
+    width: 410px;
+}
+
+.discover .heading button {
+    width: 50px;
+    height: 50px;
+    background-color: #ffc350;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -2px 2px 6px #636363;
+    transition: all 0.05s ease-in-out;
+}
+
+.discover .heading button:active {
+    box-shadow: -1px 1px 4px #636363;
+    transform: translate(-1px, 1px);
+}
+
+.discover .heading button i {
+    background-image: url("../media/arrow.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 22px;
+    height: 22px;
+    color: #0076bf;
+    display: block;
+    transition: all 0.2s ease-in-out;
+}
+
+.discover .heading button:hover i {
+    transform: translateX(5px);
+}
+
+.info {
+    margin: 70px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    max-width: 1292px;
+}
+
+.info .text h3 {
+    font-size: 45px;
+    color: #0076bf;
+    margin-bottom: 30px;
+    font-family: Calibri;
+}
+
+.info .text p {
+    font-family: proxima;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.info-1 .text p {
+    width: 560px;
+}
+
+.info-1 img {
+    width: 650px;
+}
+
+.info-2 .text {
+    width: 650px;
+}
+
+.info-2 .img-cont {
+    width: 560px;
+}
+
+.info-2 img {
+    width: 300px;
+    margin: auto;
+    display: block;
+}
+
+.decor-sec {
+    width: 100%;
+    height: 500px;
+    background-image: linear-gradient(to right, #0a7dc6, #074e84);
+    display: flex;
+    justify-content: center;
+    margin: 70px 0 220px;
+    padding-top: 50px;
+    position: relative;
+}
+
+.decor-sec h2 {
+    font-family: Calibri;
+    font-size: 55px;
+    color: #ffffff;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.decor-sec img {
+    position: absolute;
+    width: 82%;
+    height: 485px;
+    top: 35%;
+}
+
+.decor-sec i {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-image: url("../media/corner.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.decor-sec i.corner-top {
+    top: 0;
+    left: 0;
+}
+
+.decor-sec i.corner-bottom {
+    bottom: 0;
+    right: 0;
+    transform: rotateZ(180deg);
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto 90px;
+}
+
+.features div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.features div .icon {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 25px;
+}
+
+.features div p {
+    width: 280px;
+    text-align: center;
+    font-family: Calibri;
+    font-size: 18px;
+    opacity: 60%;
+    font-style: italic;
+}
+
+span.decor-sep {
+    display: block;
+    width: 60%;
+    height: 120px;
+    background-image: url(../media/decor-sep.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: auto;
+}
+
+.decor-discover {
+    position: relative;
+    margin: 70px 0;
+    width: 100%;
+    height: 400px;
+}
+
+.decor-discover .heading {
+    position: absolute;
+    width: 580px;
+    height: 102%;
+    top: -1px;
+    right: 550px;
+    z-index: 3;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 40px;
+}
+
+.decor-discover .heading h3 {
+    color: #0076bf;
+    font-size: 45px;
+    font-family: Calibri;
+    margin-bottom: 25px;
+}
+
+.decor-discover .heading p {
+    font-size: 19px;
+    font-family: Calibri;
+    font-style: italic;
+    margin-bottom: 25px;
+    width: 330px;
+    opacity: 50%;
+}
+
+.decor-discover .heading button.contact {
+    width: 130px;
+    height: 35px;
+    background-color: #ffc350;
+    color: #0076bf;
+    font-family: Amaranth;
+    font-size: 17px;
+    border: transparent;
+    cursor: pointer;
+    box-shadow: -2px 2px 6px #636363;
+    transition: all 0.2s ease-in-out;
+}
+
+.decor-discover .heading button.contact:hover {
+    color: #0076bf;
+    border: 1px solid #0076bf;
+    background-color: transparent;
+}
+
+.decor-discover .heading button.scroll {
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: #ffc350;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -2px 2px 6px #636363;
+    transition: all 0.05s ease-in-out;
+}
+
+.decor-discover .heading button.scroll:active {
+    box-shadow: -1px 1px 4px #636363;
+    transform: translate(-1px, calc(-50% + 1px));
+}
+
+.decor-discover .heading button.scroll i {
+    background-image: url("../media/arrow.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 22px;
+    height: 22px;
+    color: #0076bf;
+    display: block;
+    transition: all 0.2s ease-in-out;
+}
+
+.decor-discover .heading button.scroll:hover i {
+    transform: translateX(5px);
+}
+
+.decor-discover .slider {
+    display: flex;
+    flex-wrap: nowrap;
+    width: fit-content;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+.decor-discover .slider img {
+    margin: 0 0 0 15px;
+    width: 550px;
+    height: 400px;
+}
+
+footer {
+    width: 100%;
+    background-image: linear-gradient(135deg, #0b7fc9, #07487b);
+    padding: 60px 120px 20px;
+    color: #fff;
+}
+
+footer .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .heading h2 {
+    font-size: 42px;
+    font-family: amaranth;
+    font-weight: lighter;
+}
+
+footer .heading h4 {
+    font-size: 22px;
+    font-family: calibri;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+footer .footer-sep1,
+footer .outro .footer-sep2 {
+    width: 35%;
+    height: 2px;
+    border-radius: 8px;
+    background-color: #cdcdcd;
+    display: block;
+    margin: 60px auto 40px;
+}
+
+footer .outro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer .outro h1 {
+    font-size: 65px;
+    font-family: calibri;
+    margin-bottom: 30px;
+}
+
+footer .outro .links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+    font-size: 16px;
+    font-family: amaranth;
+    font-weight: lighter;
+    margin-bottom: 45px;
+}
+
+footer .outro .links li {
+    cursor: pointer;
+    display: block;
+    position: relative;
+}
+
+footer .outro ul.links li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 1px;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: all 0.15s ease-in-out;
+}
+
+footer .outro ul.links li:hover::after {
+    width: 100%;
+}
+
+footer .outro .contact {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+}
+
+footer .outro .contact li {
+    position: relative;
+}
+
+footer .outro .contact li:hover span {
+    display: block;
+}
+
+footer .outro .contact span {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    white-space: nowrap;
+    background-color: #000;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: calibri;
+}
+
+footer .outro .contact span::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-bottom-color: #000;
+}
+
+footer .outro .contact li a {
+    display: block;
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+footer .outro .contact li a:first-child {
+    width: 24px;
+    height: 20px;
+    background-image: url(../media/email.png);
+}
+
+footer .outro .contact li:nth-child(2) a {
+    width: 18px;
+    height: 21px;
+    background-image: url(../media/location.png);
+}
+
+footer .outro .contact li:nth-child(3) a {
+    width: 21px;
+    height: 21px;
+    background-image: url(../media/phone.png);
+}
+
+footer .outro .footer-sep2 {
+    width: 160px;
+    margin-top: 45px;
+    margin-bottom: 15px;
+}
+
+footer .outro .copyright {
+    font-family: amaranth;
+    font-weight: lighter;
+    font-size: 12px;
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1400px) {
+    header {
+        height: 700px;
+        background-size: 105% 95%;
+        margin-bottom: 20px;
+    }
+
+    header::before {
+        width: 400px;
+        height: 353px;
+        top: 39%;
+    }
+
+    header .nav {
+        height: 65px;
+        padding: 0 110px;
+    }
+
+    header .nav ul.links {
+        width: 400px;
+        font-size: 13px;
+    }
+
+    header .nav ul.links li::after {
+        bottom: -6px;
+    }
+
+    header .nav button {
+        width: 100px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    header .headings {
+        margin-right: 110px;
+    }
+
+    header .headings div h1 {
+        font-size: 72px;
+    }
+
+    header .headings div h2 {
+        font-size: 40px;
+    }
+
+    header .headings h4 {
+        font-size: 24px;
+    }
+
+    header .headings button {
+        width: 120px;
+        height: 33px;
+        font-size: 16px;
+    }
+
+    header .images {
+        width: 500px;
+    }
+
+    header .images img:first-child {
+        width: 500px;
+    }
+
+    header .images img:not(:first-child) {
+        height: 255px;
+    }
+
+    header .marks {
+        width: 550px;
+        top: 63%;
+    }
+
+    header .marks div img {
+        width: 65px;
+        height: 65px;
+    }
+
+    header .marks div span {
+        width: 80px;
+        font-size: 13px;
+    }
+
+    .separator {
+        width: 55%;
+        height: 4px;
+    }
+
+    .intro {
+        min-width: unset;
+        width: 92%;
+    }
+
+    .intro .door {
+        width: 380px;
+    }
+
+    .intro div {
+        width: 600px;
+    }
+
+    .intro div h3 {
+        font-size: 45px;
+        margin-bottom: 50px;
+    }
+
+    .intro div p {
+        font-size: 18px;
+    }
+
+    .intro .icon {
+        width: 120px;
+    }
+
+    .discover {
+        margin: 50px 0;
+        height: 525px;
+    }
+
+    .discover .overlay {
+        width: 565px;
+    }
+
+    .discover .top-corner {
+        width: 420px;
+    }
+
+    .discover .bottom-corner {
+        width: 320px;
+    }
+
+    .discover .heading h3 {
+        font-size: 45px;
+    }
+
+    .discover .heading p {
+        font-size: 20px;
+        width: 355px;
+    }
+
+    .discover .heading button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .discover .heading button i {
+        width: 18px;
+        height: 18px;
+    }
+
+    .discover .heading button:hover i {
+        transform: translateX(3px);
+    }
+
+    .discover .slider {
+        height: 525px;
+        right: 565px;
+    }
+
+    .discover .slider img {
+        width: 276px;
+        height: 525px;
+        margin: 0 18px;
+    }
+
+    .info {
+        margin: 60px auto;
+    }
+
+    .info .text h3 {
+        font-size: 40px;
+    }
+
+    .info .text p {
+        font-size: 18px;
+        width: 530px;
+    }
+
+    .info-1 img {
+        width: 540px;
+    }
+
+    .info-2 .text {
+        width: 540px;
+    }
+
+    .info-2 img {
+        width: 250px;
+    }
+
+    .decor-sec {
+        margin: 50px 0 175px;
+    }
+
+    .decor-sec i {
+        width: 250px;
+        height: 250px;
+    }
+
+    .decor-sec h2 {
+        font-size: 50px;
+    }
+
+    .decor-sec img {
+        width: 78%;
+        height: 450px;
+    }
+
+    .features div .icon {
+        width: 65px;
+        height: 65px;
+        margin-bottom: 20px;
+    }
+
+    .features {
+        margin: 0 auto 60px;
+    }
+
+    .features div p {
+        font-size: 16px;
+    }
+
+    span.decor-sep {
+        width: 50%;
+        height: 100px;
+    }
+
+    .decor-discover {
+        height: 350px;
+        margin: 50px 0;
+    }
+
+    .decor-discover .heading {
+        width: 510px;
+        right: 480px;
+    }
+
+    .decor-discover .slider img {
+        width: 480px;
+        height: 350px;
+    }
+
+    .decor-discover .heading button.scroll {
+        width: 40px;
+        height: 40px;
+        right: -20px;
+    }
+
+    .decor-discover .heading button.scroll i {
+        width: 18px;
+        height: 18px;
+    }
+
+    .decor-discover .heading button.scroll:hover i {
+        transform: translateX(3px);
+    }
+
+    footer {
+        padding: 40px 90px 15px;
+    }
+
+    footer .heading h2 {
+        font-size: 39px;
+    }
+
+    footer .heading h4 {
+        font-size: 20px;
+    }
+
+    footer .footer-sep1,
+    footer .outro .footer-sep2 {
+        width: 31%;
+        margin: 40px auto 20px;
+    }
+
+    footer .outro h1 {
+        font-size: 60px;
+    }
+
+    footer .outro .links {
+        width: 320px;
+        font-size: 14px;
+    }
+
+    footer .outro .contact li a {
+        transform: scale(0.96);
+    }
+
+    footer .outro .contact span {
+        padding: 7px;
+        font-size: 14px;
+    }
+
+    footer .outro .footer-sep2 {
+        width: 120px;
+        margin-top: 35px;
+        margin-bottom: 15px;
+    }
+
+    footer .outro .copyright {
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    ::-webkit-scrollbar {
+        background-color: #fff;
+        width: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #0076bf;
+        width: 3px;
+    }
+
+    .scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        border: 1.5px solid transparent;
+    }
+
+    .scroll-to-top:hover {
+        background-color: transparent;
+        border: 1.5px solid #0076bf;
+    }
+
+    .scroll-to-top svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    header {
+        background-size: 105% 95%;
+        margin-bottom: 250px;
+        background-image: linear-gradient(135deg, #0a80ca, #063b69);
+        height: 360px;
+    }
+
+    header::before {
+        width: 200px;
+        height: 177px;
+        top: 48%;
+    }
+
+    header .nav {
+        height: 55px;
+        padding: 0 60px;
+    }
+
+    header .nav ul.links {
+        width: 300px;
+        font-size: 12px;
+    }
+
+    header .nav ul.links li::after {
+        bottom: -4px;
+    }
+
+    header .nav button {
+        width: 75px;
+        height: 22px;
+        font-size: 12px;
+    }
+
+    header .headings {
+        margin: 0 60px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        height: 110px;
+    }
+
+    header .headings div {
+        height: 100px;
+    }
+
+    header .headings div h1 {
+        font-size: 48px;
+    }
+
+    header .headings div h2 {
+        font-size: 24px;
+    }
+
+    header .headings h4 {
+        font-size: 14px;
+        margin: 20px 0 1px;
+    }
+
+    header .headings button {
+        width: 100px;
+        height: 28px;
+        font-size: 13px;
+    }
+
+    header .images {
+        width: 97%;
+        top: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        align-items: center;
+        max-width: 910px;
+    }
+
+    header .images img:first-child {
+        width: 400px;
+        order: 2;
+    }
+
+    header .images img:not(:first-child) {
+        height: 155px;
+    }
+
+    header .images img:nth-child(2) {
+        order: 1;
+    }
+
+    header .images img:nth-child(3) {
+        order: 3;
+    }
+
+    header .marks {
+        width: 550px;
+        top: 130%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    header .marks div {
+        transform: translateY(0) !important;
+    }
+
+    header .marks div img {
+        width: 50px;
+        height: 50px;
+    }
+
+    header .marks div span {
+        width: 80px;
+        font-size: 13px;
+    }
+
+    .separator {
+        width: 55%;
+        height: 2px;
+    }
+
+    .intro {
+        min-width: unset;
+        width: 95%;
+        max-width: 800px;
+        position: relative;
+    }
+
+    .intro .door {
+        width: 320px;
+    }
+
+    .intro div {
+        width: 400px;
+    }
+
+    .intro div h3 {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+
+    .intro div p {
+        font-size: 14px;
+    }
+
+    .intro .icon {
+        width: 65px;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        margin-top: 0;
+    }
+
+    .discover {
+        margin: 30px 0;
+        height: 370px;
+    }
+
+    .discover .overlay {
+        width: 390px;
+    }
+
+    .discover .top-corner {
+        width: 280px;
+    }
+
+    .discover .bottom-corner {
+        width: 220px;
+    }
+
+    .discover .heading {
+        right: 120px;
+    }
+
+    .discover .heading h3 {
+        font-size: 30px;
+    }
+
+    .discover .heading p {
+        font-size: 16px;
+        width: 255px;
+    }
+
+    .discover .heading button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .discover .heading button i {
+        width: 14px;
+        height: 14px;
+    }
+
+    .discover .heading button:hover i {
+        transform: translateX(1px);
+    }
+
+    .discover .slider {
+        height: 370px;
+        right: 390px;
+    }
+
+    .discover .slider img {
+        width: 195px;
+        height: 370px;
+        margin: 0 14px;
+    }
+
+    .info {
+        margin: 30px auto;
+        max-width: 800px;
+    }
+
+    .info .text h3 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .info .text p {
+        font-size: 12px;
+        width: 330px;
+    }
+
+    .info-1 img {
+        width: 320px;
+    }
+
+    .info-2 .text {
+        width: 320px;
+    }
+
+    .info-2 img {
+        width: 150px;
+    }
+
+    .decor-sec {
+        margin: 30px 0 110px;
+        height: 300px;
+        padding-top: 35px;
+    }
+
+    .decor-sec i {
+        width: 150px;
+        height: 150px;
+    }
+
+    .decor-sec h2 {
+        font-size: 35px;
+    }
+
+    .decor-sec img {
+        width: 78%;
+        height: 280px;
+    }
+
+    .features {
+        margin: 0 auto 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .features div {
+        margin-bottom: 40px;
+    }
+
+    .features div .icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+    }
+
+    .features div p {
+        font-size: 13px;
+    }
+
+    span.decor-sep {
+        width: 40%;
+        height: 80px;
+    }
+
+    .decor-discover {
+        height: 250px;
+        margin: 30px 0;
+    }
+
+    .decor-discover .heading {
+        width: 373px;
+        right: 343px;
+    }
+
+    .decor-discover .slider img {
+        width: 343px;
+        height: 250px;
+    }
+
+    .decor-discover .heading h3 {
+        font-size: 30px;
+    }
+
+    .decor-discover .heading p {
+        font-size: 17px;
+        width: 250px;
+    }
+
+    .decor-discover .heading button.contact {
+        width: 110px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .decor-discover .heading button.scroll {
+        width: 30px;
+        height: 30px;
+        right: -15px;
+    }
+
+    .decor-discover .heading button.scroll i {
+        width: 14px;
+        height: 14px;
+    }
+
+    .decor-discover .heading button.scroll:hover i {
+        transform: translateX(1.5px);
+    }
+
+    footer {
+        padding: 20px 50px 10px;
+    }
+
+    footer .heading h2 {
+        font-size: 29px;
+    }
+
+    footer .heading h4 {
+        font-size: 16px;
+    }
+
+    footer .footer-sep1,
+    footer .outro .footer-sep2 {
+        width: 36%;
+        margin: 40px auto 10px;
+    }
+
+    footer .outro {
+        width: 55%;
+        max-width: 400px;
+        margin: auto;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    footer .outro h1 {
+        font-size: 46px;
+        width: 100%;
+        text-align: center;
+    }
+
+    footer .outro .links {
+        width: 36%;
+        height: 110px;
+        margin-bottom: 0;
+        font-size: 12px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    footer .outro .contact {
+        width: 36%;
+        height: 110px;
+        margin-bottom: 0;
+        flex-direction: column;
+    }
+
+    footer .outro .contact li {
+        display: flex;
+        align-items: center;
+        min-width: 50%;
+        justify-content: space-between;
+    }
+
+    footer .outro .contact li a {
+        transform: scale(0.76);
+    }
+
+    footer .outro .contact li span {
+        display: block;
+        position: static;
+        background-color: transparent;
+        color: #fff;
+        padding: 7px;
+        font-size: 12px;
+        transform: translate(0, 0);
+    }
+
+    footer .outro .contact li span::before {
+        display: none;
+    }
+
+    footer .outro .footer-sep2 {
+        width: 120px;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+
+    footer .outro .copyright {
+        width: 100%;
+        text-align: center;
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-width: 390px) and (max-width: 799px) {
+    ::-webkit-scrollbar {
+        background-color: #fff;
+        width: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #0076bf;
+        width: 3px;
+    }
+
+    .scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        border: 1.5px solid transparent;
+    }
+
+    .scroll-to-top:hover {
+        background-color: transparent;
+        border: 1.5px solid #0076bf;
+    }
+
+    .scroll-to-top svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    header {
+        background-size: 105% 95%;
+        margin-bottom: 265px;
+        background-image: linear-gradient(135deg, #0a80ca, #063b69);
+        height: 250px;
+    }
+
+    header::before {
+        width: 150px;
+        height: 132px;
+        top: 50%;
+    }
+
+    header .nav {
+        height: 50px;
+        padding: 0 25px;
+    }
+
+    header .nav ul.links {
+        width: 230px;
+        font-size: 10px;
+        margin-left: 45px;
+    }
+
+    header .nav ul.links li::after {
+        bottom: -2px;
+    }
+
+    header .nav button {
+        width: 56px;
+        height: 20px;
+        font-size: 8px;
+    }
+
+    header .headings {
+        margin: 10px 30px 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        max-width: 650px;
+        height: 60px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    header .headings div {
+        height: 100px;
+        width: 60%;
+    }
+
+    header .headings div h1 {
+        font-size: 26px;
+    }
+
+    header .headings div h2 {
+        font-size: 16px;
+    }
+
+    header .headings h4 {
+        width: 30%;
+        font-size: 10px;
+        margin: 0;
+    }
+
+    header .headings button {
+        width: 66px;
+        height: 16px;
+        font-size: 9px;
+    }
+
+    header .images {
+        width: 380px;
+        top: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+        align-items: center;
+        max-width: 910px;
+    }
+
+    header .images img:first-child {
+        width: 100%;
+    }
+
+    header .images img:not(:first-child) {
+        display: none;
+    }
+
+    header .marks {
+        width: 75%;
+        top: 160%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    header .marks div {
+        transform: translateY(0) !important;
+    }
+
+    header .marks div img {
+        width: 40px;
+        height: 40px;
+    }
+
+    header .marks div span {
+        width: 70px;
+        font-size: 12px;
+    }
+
+    .separator {
+        width: 55%;
+        height: 2px;
+    }
+
+    .intro {
+        min-width: unset;
+        width: 95%;
+        position: relative;
+        flex-direction: column;
+    }
+
+    .intro .door {
+        width: 260px;
+    }
+
+    .intro div {
+        width: 80%;
+        max-width: 500px;
+        margin-top: 20px;
+    }
+
+    .intro div h3 {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .intro div p {
+        font-size: 13px;
+    }
+
+    .intro .icon {
+        width: 50px;
+        position: absolute;
+        top: 400px;
+        right: 115px;
+        margin-top: 0;
+    }
+
+    .discover {
+        margin: 30px 0;
+        height: 550px;
+    }
+
+    .discover .overlay {
+        width: 390px;
+        display: none;
+    }
+
+    .discover .top-corner {
+        width: 200px;
+        top: 0;
+        left: 0;
+        transform: rotateZ(-90deg);
+    }
+
+    .discover .bottom-corner {
+        width: 200px;
+        top: 0;
+        right: 0;
+    }
+
+    .discover .heading {
+        top: 10%;
+        right: 50%;
+        transform: translateX(50%);
+        height: 150px;
+    }
+
+    .discover .heading h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .discover .heading h3 br {
+        display: none;
+    }
+
+    .discover .heading p {
+        font-size: 12px;
+        width: 200px;
+        margin-bottom: 15px;
+    }
+
+    .discover .heading button {
+        width: 25px;
+        height: 25px;
+    }
+
+    .discover .heading button i {
+        width: 12px;
+        height: 12px;
+    }
+
+    .discover .heading button:hover i {
+        transform: translateX(1px);
+    }
+
+    .discover .slider {
+        height: 300px;
+        top: 225px;
+        right: 0;
+    }
+
+    .discover .slider img {
+        width: 158px;
+        height: 300px;
+        margin: 0 14px;
+    }
+
+    .info {
+        flex-direction: column-reverse;
+        margin: 30px auto;
+        max-width: 800px;
+    }
+
+    .info-2 {
+        flex-direction: column;
+    }
+
+    .info .text h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .info .text p {
+        font-size: 12px;
+        width: 100%;
+        max-width: 430px;
+    }
+
+    .info-1 img {
+        width: 360px;
+        margin-bottom: 15px;
+    }
+
+    .info-2 .text {
+        width: 100%;
+        max-width: 430px;
+    }
+
+    .info-2 img {
+        width: 120px;
+        margin-bottom: 15px;
+    }
+
+    .decor-sec {
+        margin: 30px 0 110px;
+        height: 220px;
+        padding-top: 40px;
+    }
+
+    .decor-sec i {
+        width: 120px;
+        height: 120px;
+    }
+
+    .decor-sec h2 {
+        font-size: 26px;
+    }
+
+    .decor-sec img {
+        width: 78%;
+        max-width: 435px;
+        height: 200px;
+        top: 100px;
+    }
+
+    .features {
+        width: 100%;
+        margin: 0 auto 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .features div {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .features div .icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 15px;
+    }
+
+    .features div p {
+        font-size: 12px;
+    }
+
+    span.decor-sep {
+        width: 60%;
+        height: 80px;
+    }
+
+    .decor-discover {
+        height: 400px;
+        margin: 30px 0;
+    }
+
+    .decor-discover .heading {
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-wrap: wrap;
+        height: 110px;
+    }
+
+    .decor-discover .slider {
+        top: 130px;
+        right: 0;
+    }
+
+    .decor-discover .slider img {
+        width: 343px;
+        height: 250px;
+    }
+
+    .decor-discover .heading h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        width: 60%;
+        height: 100%;
+    }
+
+    .decor-discover .heading p {
+        font-size: 12px;
+        width: 200px;
+        height: 50px;
+        margin-bottom: 15px;
+        justify-content: space-between;
+    }
+
+    .decor-discover .heading button.contact {
+        width: 85px;
+        height: 24px;
+        font-size: 12px;
+    }
+
+    .decor-discover .heading button.scroll {
+        width: 25px;
+        top: 80%;
+        height: 25px;
+        left: -65%;
+    }
+
+    .decor-discover .heading button.scroll i {
+        width: 12px;
+        height: 12px;
+    }
+
+    .decor-discover .heading button.scroll:hover i {
+        transform: translateX(1.5px);
+    }
+
+    footer {
+        padding: 20px 30px 10px;
+    }
+
+    footer .heading h2 {
+        font-size: 22px;
+    }
+
+    footer .heading h4 {
+        font-size: 14px;
+    }
+
+    footer .footer-sep1,
+    footer .outro .footer-sep2 {
+        width: 48%;
+        margin: 30px auto 10px;
+    }
+
+    footer .outro {
+        width: 65%;
+        max-width: 400px;
+        margin: auto;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    footer .outro h1 {
+        font-size: 32px;
+        width: 100%;
+        text-align: center;
+    }
+
+    footer .outro .links {
+        width: 36%;
+        height: 110px;
+        margin-bottom: 0;
+        font-size: 11px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    footer .outro .contact {
+        width: 36%;
+        height: 110px;
+        margin-bottom: 0;
+        flex-direction: column;
+    }
+
+    footer .outro .contact li {
+        display: flex;
+        align-items: center;
+        min-width: 50%;
+        justify-content: space-between;
+    }
+
+    footer .outro .contact li a {
+        transform: scale(0.66);
+    }
+
+    footer .outro .contact li span {
+        display: block;
+        position: static;
+        background-color: transparent;
+        color: #fff;
+        padding: 7px;
+        font-size: 11px;
+        transform: translate(0, 0);
+    }
+
+    footer .outro .contact li span::before {
+        display: none;
+    }
+
+    footer .outro .footer-sep2 {
+        width: 100px;
+        margin-top: 20px;
+        margin-bottom: 8px;
+    }
+
+    footer .outro .copyright {
+        width: 100%;
+        text-align: center;
+        font-size: 10px;
+    }
+}
