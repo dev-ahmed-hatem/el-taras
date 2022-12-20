@@ -86,10 +86,10 @@ header {
 
 header::before {
     content: "";
-    width: 484px;
-    height: 426px;
+    width: 454px;
+    height: 400px;
     position: absolute;
-    top: 35%;
+    top: 41%;
     left: 50%;
     background-image: url("../media/decor.png");
     background-position: center center;
@@ -166,18 +166,18 @@ header .headings {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 550px;
+    width: 700px;
     height: 330px;
     color: white;
     font-family: Calibri;
 }
 
 header .headings div h1 {
-    font-size: 78px;
+    font-size: 62px;
 }
 
 header .headings div h2 {
-    font-size: 43px;
+    font-size: 35px;
     font-style: italic;
 }
 
@@ -309,7 +309,7 @@ header .marks div span {
 .discover {
     margin: 60px 0;
     position: relative;
-    height: 550px;
+    height: 580px;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -346,16 +346,29 @@ header .marks div span {
 .discover .slider {
     display: flex;
     justify-content: space-between;
-    height: 550px;
+    height: 580px;
     transition: all 0.2s ease-in-out;
     position: absolute;
     right: 625px;
 }
 
-.discover .slider img {
+.discover .slider div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.discover .slider div img {
     width: 290px;
     height: 550px;
     margin: 0 20px;
+}
+
+.discover .slider div span {
+    font-family: proxima;
+    font-style: italic;
 }
 
 .discover .heading {
@@ -834,7 +847,7 @@ footer .outro .copyright {
     header::before {
         width: 400px;
         height: 353px;
-        top: 39%;
+        top: 42%;
     }
 
     header .nav {
@@ -858,19 +871,19 @@ footer .outro .copyright {
     }
 
     header .headings {
-        margin-right: 110px;
+        margin-left: 110px;
     }
 
     header .headings div h1 {
-        font-size: 72px;
+        font-size: 60px;
     }
 
     header .headings div h2 {
-        font-size: 40px;
+        font-size: 34px;
     }
 
     header .headings h4 {
-        font-size: 24px;
+        font-size: 23px;
     }
 
     header .headings button {
@@ -894,6 +907,7 @@ footer .outro .copyright {
     header .marks {
         width: 550px;
         top: 63%;
+        left: 110px;
     }
 
     header .marks div img {
@@ -939,7 +953,7 @@ footer .outro .copyright {
 
     .discover {
         margin: 50px 0;
-        height: 525px;
+        height: 560px;
     }
 
     .discover .overlay {
@@ -978,11 +992,11 @@ footer .outro .copyright {
     }
 
     .discover .slider {
-        height: 525px;
+        height: 560px;
         right: 565px;
     }
 
-    .discover .slider img {
+    .discover .slider div img {
         width: 276px;
         height: 525px;
         margin: 0 18px;
@@ -1167,7 +1181,7 @@ footer .outro .copyright {
     header::before {
         width: 200px;
         height: 177px;
-        top: 48%;
+        top: 50%;
     }
 
     header .nav {
@@ -1205,11 +1219,11 @@ footer .outro .copyright {
     }
 
     header .headings div h1 {
-        font-size: 48px;
+        font-size: 42px;
     }
 
     header .headings div h2 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     header .headings h4 {
@@ -1309,7 +1323,7 @@ footer .outro .copyright {
 
     .discover {
         margin: 30px 0;
-        height: 370px;
+        height: 400px;
     }
 
     .discover .overlay {
@@ -1352,11 +1366,11 @@ footer .outro .copyright {
     }
 
     .discover .slider {
-        height: 370px;
+        height: 400px;
         right: 390px;
     }
 
-    .discover .slider img {
+    .discover .slider div img {
         width: 195px;
         height: 370px;
         margin: 0 14px;
@@ -1599,13 +1613,13 @@ footer .outro .copyright {
         background-size: 105% 95%;
         margin-bottom: 240px;
         background-image: linear-gradient(135deg, #0a80ca, #063b69);
-        height: 250px;
+        height: 260px;
     }
 
     header::before {
         width: 125px;
         height: 110px;
-        top: 50%;
+        top: 57%;
     }
 
     header .nav {
@@ -1630,34 +1644,38 @@ footer .outro .copyright {
     }
 
     header .headings {
-        margin: 15px 25px;
+        margin: 10px 0;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
+        align-items: center;
         width: 100%;
-        max-width: 650px;
-        height: 60px;
+        max-width: 500px;
+        height: fit-content;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
     }
 
     header .headings div {
-        height: 100px;
-        width: 60%;
+        height: fit-content;
+        width: 100%;
+        margin-bottom: 15px;
     }
 
     header .headings div h1 {
-        font-size: 26px;
+        font-size: 20px;
+        text-align: center;
     }
 
     header .headings div h2 {
-        font-size: 16px;
+        font-size: 12px;
+        text-align: center;
     }
 
     header .headings h4 {
-        width: 30%;
+        width: fit-content;
         font-size: 10px;
         margin: 0;
     }
@@ -1670,7 +1688,7 @@ footer .outro .copyright {
 
     header .images {
         width: 360px;
-        top: 145px;
+        top: 160px;
         left: 50%;
         transform: translateX(-50%);
         align-items: center;
@@ -1738,6 +1756,7 @@ footer .outro .copyright {
     }
 
     .intro .icon {
+        display: none;
         width: 50px;
         position: absolute;
         top: 400px;
@@ -1746,8 +1765,8 @@ footer .outro .copyright {
     }
 
     .discover {
-        margin: 30px 0;
-        height: 450px;
+        margin: 30px 0 10px;
+        height: 500px;
     }
 
     .discover .overlay {
@@ -1770,9 +1789,9 @@ footer .outro .copyright {
 
     .discover .heading {
         top: 5%;
-        right: 47%;
+        right: 44%;
         transform: translateX(50%);
-        height: 150px;
+        height: 100px;
     }
 
     .discover .heading h3 {
@@ -1806,15 +1825,19 @@ footer .outro .copyright {
     }
 
     .discover .slider {
-        height: 300px;
+        height: 330px;
         top: 160px;
         right: 0;
     }
 
-    .discover .slider img {
+    .discover .slider div img {
         width: 158px;
         height: 300px;
         margin: 0 14px;
+    }
+
+    .discover .slider div span {
+        font-size: 12px;
     }
 
     .info {
