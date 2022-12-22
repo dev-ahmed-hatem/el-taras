@@ -1,16 +1,16 @@
 @font-face {
-    font-family: "amaranth";
-    src: url(./Fonts/Amaranth-Regular.ttf);
-}
-
-@font-face {
-    font-family: "proxima";
-    src: url(./Fonts/Proxima\ Nova\ Font.otf);
+    font-family: "almarai";
+    src: url(./Fonts/Almarai-Regular.ttf);
 }
 
 @font-face {
     font-family: "kufam";
     src: url(./Fonts/Kufam-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "cairo";
+    src: url(./Fonts/Cairo-VariableFont.ttf);
 }
 
 * {
@@ -23,6 +23,7 @@ html,
 body {
     overflow-x: hidden;
     scroll-behavior: smooth;
+    direction: rtl;
 }
 
 ::-webkit-scrollbar {
@@ -38,7 +39,7 @@ body {
 .scroll-to-top {
     position: fixed;
     bottom: 25px;
-    right: 25px;
+    left: 25px;
     width: 50px;
     height: 50px;
     border-radius: 10px;
@@ -80,8 +81,8 @@ body {
 
 header {
     width: 100%;
-    height: 765px;
-    background-image: url("../media/Path\ 3.png");
+    height: 780px;
+    background-image: url("../media/Path\ 3-ar.png");
     background-position: -5px -5px;
     background-size: 105% 90%;
     background-repeat: no-repeat;
@@ -91,10 +92,10 @@ header {
 
 header::before {
     content: "";
-    width: 454px;
-    height: 400px;
+    width: 400px;
+    height: 352px;
     position: absolute;
-    top: 41%;
+    top: 43%;
     left: 50%;
     background-image: url("../media/decor.png");
     background-position: center center;
@@ -120,9 +121,9 @@ header .nav ul.links {
     align-items: center;
     width: 450px;
     color: white;
-    font-family: amaranth;
+    font-family: kufam;
     font-size: 14px;
-    margin-left: 150px;
+    margin-right: 150px;
 }
 
 header .nav ul.links li {
@@ -134,7 +135,7 @@ header .nav ul.links li {
 header .nav ul.links li::after {
     content: "";
     position: absolute;
-    left: 0;
+    right: 0;
     bottom: -8px;
     width: 0;
     height: 1px;
@@ -154,11 +155,11 @@ header .nav button {
     background-color: #ffc350;
     width: 120px;
     height: 35px;
-    font-family: amaranth;
+    font-family: kufam;
     font-size: 16px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-    margin-right: 40px;
+    margin-left: 40px;
 }
 
 header .nav button:hover {
@@ -169,7 +170,7 @@ header .nav button:hover {
 
 header .nav .lang {
     position: absolute;
-    right: 40px;
+    left: 40px;
 }
 
 header .nav .lang a {
@@ -179,27 +180,28 @@ header .nav .lang a {
 }
 
 header .headings {
-    margin-left: 140px;
+    margin-right: 140px;
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 700px;
     height: 330px;
     color: white;
-    font-family: Calibri;
+    font-family: almarai;
 }
 
 header .headings div h1 {
-    font-size: 62px;
+    font-size: 58px;
 }
 
 header .headings div h2 {
-    font-size: 35px;
+    font-size: 33px;
     font-style: italic;
 }
 
 header .headings h4 {
-    font-size: 26px;
+    font-size: 25px;
     font-style: italic;
     font-weight: lighter;
 }
@@ -209,7 +211,7 @@ header .headings button {
     height: 35px;
     background-color: #ffc350;
     color: #0076bf;
-    font-family: Amaranth;
+    font-family: kufam;
     font-size: 17px;
     border: transparent;
     cursor: pointer;
@@ -228,7 +230,7 @@ header .images {
     flex-wrap: wrap;
     width: 600px;
     position: absolute;
-    right: 0;
+    left: 0;
     top: 90px;
     justify-content: space-between;
 }
@@ -245,10 +247,10 @@ header .marks {
     width: 650px;
     display: flex;
     justify-content: space-between;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: cairo;
     position: absolute;
-    top: 60%;
-    left: 140px;
+    top: 62%;
+    right: 140px;
 }
 
 header .marks div {
@@ -306,15 +308,15 @@ header .marks div span {
 
 .intro div h3 {
     color: #0076bf;
-    font-family: Calibri;
-    font-size: 50px;
+    font-family: almarai;
+    font-size: 45px;
     margin-bottom: 30px;
 }
 
 .intro div p {
     margin-bottom: 20px;
-    font-family: "proxima";
-    font-size: 20px;
+    font-family: "cairo";
+    font-size: 18px;
     text-align: justify;
 }
 
@@ -339,7 +341,7 @@ header .marks div span {
     width: 625px;
     height: 100%;
     top: 0;
-    right: 0;
+    left: 0;
     background-color: #ffffff;
     z-index: 1;
 }
@@ -347,17 +349,19 @@ header .marks div span {
 .discover .top-corner {
     position: absolute;
     top: 0;
-    right: -4px;
+    left: -4px;
     width: 450px;
     z-index: 3;
+    transform: rotateY(180deg);
 }
 
 .discover .bottom-corner {
     position: absolute;
     bottom: -8px;
-    right: -50px;
+    left: -50px;
     width: 350px;
     z-index: 2;
+    transform: rotateY(180deg);
 }
 
 .discover .slider {
@@ -366,7 +370,7 @@ header .marks div span {
     height: 580px;
     transition: all 0.2s ease-in-out;
     position: absolute;
-    right: 625px;
+    left: 625px;
 }
 
 .discover .slider div {
@@ -384,26 +388,26 @@ header .marks div span {
 }
 
 .discover .slider div span {
-    font-family: proxima;
+    font-family: cairo;
     font-style: italic;
 }
 
 .discover .heading {
     position: absolute;
-    right: 200px;
+    left: 200px;
     z-index: 5;
 }
 
 .discover .heading h3 {
     font-size: 50px;
-    font-family: Calibri;
+    font-family: almarai;
     color: #0076bf;
     margin-bottom: 30px;
 }
 
 .discover .heading p {
     font-size: 23px;
-    font-family: proxima;
+    font-family: cairo;
     margin-bottom: 30px;
     opacity: 50%;
     width: 410px;
@@ -440,10 +444,11 @@ header .marks div span {
     color: #0076bf;
     display: block;
     transition: all 0.2s ease-in-out;
+    transform: rotateY(180deg);
 }
 
 .discover .heading button:hover i {
-    transform: translateX(5px);
+    transform: translateX(-5px) rotateY(180deg);
 }
 
 .info {
@@ -456,16 +461,16 @@ header .marks div span {
 }
 
 .info .text h3 {
-    font-size: 45px;
+    font-size: 40px;
     color: #0076bf;
     margin-bottom: 30px;
-    font-family: Calibri;
+    font-family: almarai;
 }
 
 .info .text p {
-    font-family: proxima;
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-family: cairo;
+    font-size: 18px;
+    margin-bottom: 15px;
     text-align: justify;
 }
 
@@ -503,7 +508,7 @@ header .marks div span {
 }
 
 .decor-sec h2 {
-    font-family: Calibri;
+    font-family: almarai;
     font-size: 55px;
     color: #ffffff;
     font-style: italic;
@@ -561,7 +566,7 @@ header .marks div span {
 .features div p {
     width: 280px;
     text-align: center;
-    font-family: Calibri;
+    font-family: almarai;
     font-size: 18px;
     opacity: 60%;
     font-style: italic;
@@ -589,26 +594,26 @@ span.decor-sep {
     width: 580px;
     height: 102%;
     top: -1px;
-    right: 550px;
+    left: 550px;
     z-index: 3;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .decor-discover .heading h3 {
     color: #0076bf;
-    font-size: 45px;
-    font-family: Calibri;
+    font-size: 40px;
+    font-family: almarai;
     margin-bottom: 25px;
 }
 
 .decor-discover .heading p {
     font-size: 19px;
-    font-family: Calibri;
+    font-family: almarai;
     font-style: italic;
     margin-bottom: 25px;
     width: 330px;
@@ -620,7 +625,7 @@ span.decor-sep {
     height: 35px;
     background-color: #ffc350;
     color: #0076bf;
-    font-family: Amaranth;
+    font-family: kufam;
     font-size: 17px;
     border: transparent;
     cursor: pointer;
@@ -636,7 +641,7 @@ span.decor-sep {
 
 .decor-discover .heading button.scroll {
     position: absolute;
-    right: -25px;
+    left: -25px;
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
@@ -669,10 +674,11 @@ span.decor-sep {
     color: #0076bf;
     display: block;
     transition: all 0.2s ease-in-out;
+    transform: rotateY(180deg);
 }
 
 .decor-discover .heading button.scroll:hover i {
-    transform: translateX(5px);
+    transform: translateX(-5px) rotateY(180deg);
 }
 
 .decor-discover .slider {
@@ -682,13 +688,13 @@ span.decor-sep {
     height: 400px;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 1;
     transition: all 0.2s ease-in-out;
 }
 
 .decor-discover .slider img {
-    margin: 0 0 0 15px;
+    margin: 0 15px 0 0;
     width: 550px;
     height: 400px;
 }
@@ -708,13 +714,13 @@ footer .heading {
 
 footer .heading h2 {
     font-size: 42px;
-    font-family: amaranth;
+    font-family: kufam;
     font-weight: lighter;
 }
 
 footer .heading h4 {
     font-size: 22px;
-    font-family: calibri;
+    font-family: almarai;
     font-weight: lighter;
     font-style: italic;
 }
@@ -738,7 +744,7 @@ footer .outro {
 
 footer .outro h1 {
     font-size: 65px;
-    font-family: calibri;
+    font-family: almarai;
     margin-bottom: 30px;
 }
 
@@ -748,8 +754,8 @@ footer .outro .links {
     justify-content: space-between;
     align-items: center;
     width: 350px;
-    font-size: 16px;
-    font-family: amaranth;
+    font-size: 13px;
+    font-family: kufam;
     font-weight: lighter;
     margin-bottom: 45px;
 }
@@ -763,7 +769,7 @@ footer .outro .links li {
 footer .outro ul.links li::after {
     content: "";
     position: absolute;
-    left: 0;
+    right: 0;
     bottom: -8px;
     width: 0;
     height: 1px;
@@ -803,7 +809,7 @@ footer .outro .contact span {
     background-color: #000;
     padding: 10px;
     border-radius: 5px;
-    font-family: calibri;
+    font-family: almarai;
 }
 
 footer .outro .contact span::before {
@@ -849,22 +855,22 @@ footer .outro .footer-sep2 {
 }
 
 footer .outro .copyright {
-    font-family: amaranth;
+    font-family: kufam;
     font-weight: lighter;
     font-size: 12px;
 }
 
 @media screen and (min-width: 1280px) and (max-width: 1400px) {
     header {
-        height: 700px;
+        height: 680px;
         background-size: 105% 95%;
         margin-bottom: 20px;
     }
 
     header::before {
-        width: 400px;
-        height: 353px;
-        top: 42%;
+        width: 380px;
+        height: 335px;
+        top: 43%;
     }
 
     header .nav {
@@ -885,37 +891,38 @@ footer .outro .copyright {
         width: 100px;
         height: 30px;
         font-size: 14px;
-        margin-right: 20px;
-    }
-
-    header .nav .lang {
-        right: 30px;
-    }
-
-    header .nav .lang a {
-        font-size: 14px;
     }
 
     header .headings {
-        margin-left: 110px;
+        height: 300px;
+        margin-right: 90px;
     }
 
     header .headings div h1 {
-        font-size: 60px;
+        font-size: 47px;
     }
 
     header .headings div h2 {
-        font-size: 34px;
+        font-size: 25px;
     }
 
     header .headings h4 {
-        font-size: 23px;
+        font-size: 21px;
     }
 
     header .headings button {
         width: 120px;
         height: 33px;
         font-size: 16px;
+        margin-left: 20px;
+    }
+
+    header .nav .lang {
+        left: 30px;
+    }
+
+    header .nav .lang a {
+        font-size: 17px;
     }
 
     header .images {
@@ -932,8 +939,8 @@ footer .outro .copyright {
 
     header .marks {
         width: 550px;
-        top: 63%;
-        left: 110px;
+        top: 65%;
+        right: 90px;
     }
 
     header .marks div img {
@@ -965,12 +972,12 @@ footer .outro .copyright {
     }
 
     .intro div h3 {
-        font-size: 45px;
+        font-size: 43px;
         margin-bottom: 50px;
     }
 
     .intro div p {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .intro .icon {
@@ -1014,12 +1021,12 @@ footer .outro .copyright {
     }
 
     .discover .heading button:hover i {
-        transform: translateX(3px);
+        transform: translateX(-3px) rotateY(180deg);
     }
 
     .discover .slider {
         height: 560px;
-        right: 565px;
+        left: 565px;
     }
 
     .discover .slider div img {
@@ -1033,11 +1040,11 @@ footer .outro .copyright {
     }
 
     .info .text h3 {
-        font-size: 40px;
+        font-size: 33px;
     }
 
     .info .text p {
-        font-size: 18px;
+        font-size: 15px;
         width: 530px;
     }
 
@@ -1097,7 +1104,21 @@ footer .outro .copyright {
 
     .decor-discover .heading {
         width: 510px;
-        right: 480px;
+        left: 480px;
+    }
+
+    .decor-discover .heading h3 {
+        font-size: 33px;
+    }
+
+    .decor-discover .heading p {
+        font-size: 16px;
+    }
+
+    .decor-discover .heading button.contact {
+        width: 105px;
+        height: 30px;
+        font-size: 13px;
     }
 
     .decor-discover .slider img {
@@ -1108,7 +1129,7 @@ footer .outro .copyright {
     .decor-discover .heading button.scroll {
         width: 40px;
         height: 40px;
-        right: -20px;
+        left: -20px;
     }
 
     .decor-discover .heading button.scroll i {
@@ -1117,7 +1138,7 @@ footer .outro .copyright {
     }
 
     .decor-discover .heading button.scroll:hover i {
-        transform: translateX(3px);
+        transform: translateX(-3px) rotateY(180deg);
     }
 
     footer {
@@ -1125,26 +1146,26 @@ footer .outro .copyright {
     }
 
     footer .heading h2 {
-        font-size: 39px;
+        font-size: 36px;
     }
 
     footer .heading h4 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     footer .footer-sep1,
     footer .outro .footer-sep2 {
-        width: 31%;
+        width: 28%;
         margin: 40px auto 20px;
     }
 
     footer .outro h1 {
-        font-size: 60px;
+        font-size: 55px;
     }
 
     footer .outro .links {
         width: 320px;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     footer .outro .contact li a {
@@ -1180,7 +1201,7 @@ footer .outro .copyright {
 
     .scroll-to-top {
         bottom: 20px;
-        right: 20px;
+        left: 20px;
         width: 40px;
         height: 40px;
         border-radius: 8px;
@@ -1217,7 +1238,7 @@ footer .outro .copyright {
 
     header .nav ul.links {
         width: 300px;
-        font-size: 12px;
+        font-size: 9px;
     }
 
     header .nav ul.links li::after {
@@ -1227,16 +1248,16 @@ footer .outro .copyright {
     header .nav button {
         width: 75px;
         height: 22px;
-        font-size: 11px;
-        margin-right: 15px;
+        font-size: 9px;
+        margin-left: 15px;
     }
 
     header .nav .lang {
-        right: 15px;
+        left: 15px;
     }
 
     header .nav .lang a {
-        font-size: 11px;
+        font-size: 14px;
     }
 
     header .headings {
@@ -1250,26 +1271,28 @@ footer .outro .copyright {
     }
 
     header .headings div {
-        height: 100px;
+        height: 70px;
     }
 
     header .headings div h1 {
-        font-size: 42px;
+        font-size: 33px;
+        font-weight: 400;
     }
 
     header .headings div h2 {
-        font-size: 20px;
+        font-size: 16px;
+        font-weight: 400;
     }
 
     header .headings h4 {
-        font-size: 14px;
+        font-size: 12px;
         margin: 20px 0 1px;
     }
 
     header .headings button {
-        width: 100px;
-        height: 28px;
-        font-size: 13px;
+        width: 80px;
+        height: 25px;
+        font-size: 10px;
     }
 
     header .images {
@@ -1301,8 +1324,8 @@ footer .outro .copyright {
     header .marks {
         width: 550px;
         top: 130%;
-        left: 50%;
-        transform: translateX(-50%);
+        right: 50%;
+        transform: translateX(50%);
     }
 
     header .marks div {
@@ -1340,19 +1363,19 @@ footer .outro .copyright {
     }
 
     .intro div h3 {
-        font-size: 32px;
+        font-size: 23px;
         margin-bottom: 25px;
     }
 
     .intro div p {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .intro .icon {
-        width: 65px;
+        width: 45px;
         position: absolute;
-        top: 30px;
-        right: 30px;
+        top: 25px;
+        left: 30px;
         margin-top: 0;
     }
 
@@ -1374,15 +1397,15 @@ footer .outro .copyright {
     }
 
     .discover .heading {
-        right: 120px;
+        left: 120px;
     }
 
     .discover .heading h3 {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .discover .heading p {
-        font-size: 16px;
+        font-size: 13px;
         width: 255px;
     }
 
@@ -1397,12 +1420,12 @@ footer .outro .copyright {
     }
 
     .discover .heading button:hover i {
-        transform: translateX(1px);
+        transform: translateX(-1px) rotateY(120deg);
     }
 
     .discover .slider {
         height: 400px;
-        right: 390px;
+        left: 390px;
     }
 
     .discover .slider div img {
@@ -1417,12 +1440,12 @@ footer .outro .copyright {
     }
 
     .info .text h3 {
-        font-size: 28px;
-        margin-bottom: 10px;
+        font-size: 20px;
+        margin-bottom: 12px;
     }
 
     .info .text p {
-        font-size: 12px;
+        font-size: 10px;
         width: 330px;
     }
 
@@ -1450,7 +1473,7 @@ footer .outro .copyright {
     }
 
     .decor-sec h2 {
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .decor-sec img {
@@ -1466,6 +1489,7 @@ footer .outro .copyright {
 
     .features div {
         margin-bottom: 40px;
+        width: 45%;
     }
 
     .features div .icon {
@@ -1476,6 +1500,7 @@ footer .outro .copyright {
 
     .features div p {
         font-size: 13px;
+        width: 220px;
     }
 
     span.decor-sep {
@@ -1490,7 +1515,7 @@ footer .outro .copyright {
 
     .decor-discover .heading {
         width: 373px;
-        right: 343px;
+        left: 343px;
     }
 
     .decor-discover .slider img {
@@ -1499,11 +1524,11 @@ footer .outro .copyright {
     }
 
     .decor-discover .heading h3 {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .decor-discover .heading p {
-        font-size: 17px;
+        font-size: 14px;
         width: 250px;
     }
 
@@ -1516,7 +1541,7 @@ footer .outro .copyright {
     .decor-discover .heading button.scroll {
         width: 30px;
         height: 30px;
-        right: -15px;
+        left: -15px;
     }
 
     .decor-discover .heading button.scroll i {
@@ -1525,7 +1550,7 @@ footer .outro .copyright {
     }
 
     .decor-discover .heading button.scroll:hover i {
-        transform: translateX(1.5px);
+        transform: translateX(-1.5px) rotateY(180deg);
     }
 
     footer {
@@ -1533,16 +1558,16 @@ footer .outro .copyright {
     }
 
     footer .heading h2 {
-        font-size: 29px;
+        font-size: 25px;
     }
 
     footer .heading h4 {
-        font-size: 16px;
+        font-size: 13px;
     }
 
     footer .footer-sep1,
     footer .outro .footer-sep2 {
-        width: 36%;
+        width: 32%;
         margin: 40px auto 10px;
     }
 
@@ -1555,16 +1580,16 @@ footer .outro .copyright {
     }
 
     footer .outro h1 {
-        font-size: 46px;
+        font-size: 40px;
         width: 100%;
         text-align: center;
     }
 
     footer .outro .links {
-        width: 36%;
+        width: 50%;
         height: 110px;
         margin-bottom: 0;
-        font-size: 12px;
+        font-size: 11px;
         flex-direction: column;
         justify-content: space-between;
     }
@@ -1577,11 +1602,11 @@ footer .outro .copyright {
     }
 
     footer .outro .contact li {
-        width: 100%;
         display: flex;
         align-items: center;
         min-width: 50%;
         justify-content: space-between;
+        width: 100%;
     }
 
     footer .outro .contact li a {
@@ -1589,14 +1614,14 @@ footer .outro .copyright {
     }
 
     footer .outro .contact li span {
+        width: 90%;
         display: block;
         position: static;
         background-color: transparent;
         color: #fff;
         padding: 7px;
-        font-size: 12px;
+        font-size: 11px;
         transform: translate(0, 0);
-        width: 90%;
     }
 
     footer .outro .contact li span::before {
@@ -1612,7 +1637,7 @@ footer .outro .copyright {
     footer .outro .copyright {
         width: 100%;
         text-align: center;
-        font-size: 11px;
+        font-size: 9px;
     }
 }
 
@@ -1629,7 +1654,7 @@ footer .outro .copyright {
 
     .scroll-to-top {
         bottom: 20px;
-        right: 20px;
+        left: 20px;
         width: 40px;
         height: 40px;
         border-radius: 8px;
@@ -1648,7 +1673,7 @@ footer .outro .copyright {
 
     header {
         background-size: 105% 95%;
-        margin-bottom: 240px;
+        margin-bottom: 250px;
         background-image: linear-gradient(135deg, #0a80ca, #063b69);
         height: 260px;
     }
@@ -1665,9 +1690,9 @@ footer .outro .copyright {
     }
 
     header .nav ul.links {
-        width: 230px;
-        font-size: 10px;
-        margin-left: 30px;
+        width: 180px;
+        font-size: 6px;
+        margin-right: 10px;
     }
 
     header .nav ul.links li::after {
@@ -1678,15 +1703,15 @@ footer .outro .copyright {
         width: 56px;
         height: 20px;
         font-size: 8px;
-        margin-right: 15px;
+        margin-left: 15px;
     }
 
     header .nav .lang {
-        right: 10px;
+        left: 10px;
     }
 
     header .nav .lang a {
-        font-size: 8px;
+        font-size: 10px;
     }
 
     header .headings {
@@ -1711,25 +1736,27 @@ footer .outro .copyright {
     }
 
     header .headings div h1 {
-        font-size: 20px;
+        font-size: 16px;
         text-align: center;
+        font-weight: 400;
     }
 
     header .headings div h2 {
-        font-size: 12px;
+        font-size: 10px;
         text-align: center;
+        font-weight: 400;
     }
 
     header .headings h4 {
         width: fit-content;
-        font-size: 10px;
+        font-size: 8px;
         margin: 0;
     }
 
     header .headings button {
         width: 66px;
         height: 16px;
-        font-size: 9px;
+        font-size: 8px;
     }
 
     header .images {
@@ -1752,8 +1779,8 @@ footer .outro .copyright {
     header .marks {
         width: 75%;
         top: 155%;
-        left: 50%;
-        transform: translateX(-50%);
+        right: 50%;
+        transform: translateX(50%);
     }
 
     header .marks div {
@@ -1767,7 +1794,7 @@ footer .outro .copyright {
 
     header .marks div span {
         width: 70px;
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .separator {
@@ -1793,12 +1820,13 @@ footer .outro .copyright {
     }
 
     .intro div h3 {
-        font-size: 26px;
-        margin-bottom: 20px;
+        font-size: 18px;
+        margin-bottom: 14px;
     }
 
     .intro div p {
-        font-size: 13px;
+        font-size: 10px;
+        margin-bottom: 12px;
     }
 
     .intro .icon {
@@ -1831,17 +1859,18 @@ footer .outro .copyright {
         width: 125px;
         top: 0;
         right: 0;
+        transform: rotateY(0);
     }
 
     .discover .heading {
-        top: 5%;
-        right: 44%;
+        top: 3%;
+        right: 36%;
         transform: translateX(50%);
         height: 100px;
     }
 
     .discover .heading h3 {
-        font-size: 19px;
+        font-size: 16px;
         width: 240px;
         margin-bottom: 8px;
     }
@@ -1851,29 +1880,29 @@ footer .outro .copyright {
     }
 
     .discover .heading p {
-        font-size: 11px;
+        font-size: 9px;
         width: 200px;
         margin-bottom: 8px;
     }
 
     .discover .heading button {
-        width: 25px;
-        height: 25px;
+        width: 22px;
+        height: 22px;
     }
 
     .discover .heading button i {
-        width: 12px;
-        height: 12px;
+        width: 10px;
+        height: 10px;
     }
 
     .discover .heading button:hover i {
-        transform: translateX(1px);
+        transform: translateX(-1px) rotateY(180deg);
     }
 
     .discover .slider {
         height: 330px;
         top: 160px;
-        right: 0;
+        left: 0;
     }
 
     .discover .slider div img {
@@ -1897,19 +1926,20 @@ footer .outro .copyright {
     }
 
     .info .text h3 {
-        font-size: 24px;
-        margin-bottom: 10px;
+        font-size: 20px;
+        margin-bottom: 20px;
     }
 
     .info .text p {
-        font-size: 12px;
+        font-size: 10px;
         width: 100%;
         max-width: 430px;
+        margin-bottom: 10px;
     }
 
     .info-1 img {
         width: 360px;
-        margin-bottom: 15px;
+        margin-bottom: 30px;
     }
 
     .info-2 .text {
@@ -1919,7 +1949,7 @@ footer .outro .copyright {
 
     .info-2 img {
         width: 120px;
-        margin-bottom: 15px;
+        margin-bottom: 30px;
     }
 
     .decor-sec {
@@ -1934,7 +1964,7 @@ footer .outro .copyright {
     }
 
     .decor-sec h2 {
-        font-size: 22px;
+        font-size: 19px;
     }
 
     .decor-sec img {
@@ -1963,7 +1993,8 @@ footer .outro .copyright {
     }
 
     .features div p {
-        font-size: 12px;
+        font-size: 9px;
+        width: 140px;
     }
 
     span.decor-sep {
@@ -1987,7 +2018,7 @@ footer .outro .copyright {
 
     .decor-discover .slider {
         top: 130px;
-        right: 0;
+        left: 0;
     }
 
     .decor-discover .slider img {
@@ -1996,7 +2027,7 @@ footer .outro .copyright {
     }
 
     .decor-discover .heading h3 {
-        font-size: 18px;
+        font-size: 16px;
         margin-right: 5px;
         margin-bottom: 15px;
         max-width: 180px;
@@ -2004,7 +2035,7 @@ footer .outro .copyright {
     }
 
     .decor-discover .heading p {
-        font-size: 12px;
+        font-size: 10px;
         width: 200px;
         height: 50px;
         margin-bottom: 15px;
@@ -2014,14 +2045,14 @@ footer .outro .copyright {
     .decor-discover .heading button.contact {
         width: 85px;
         height: 24px;
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .decor-discover .heading button.scroll {
         width: 25px;
         top: 80%;
         height: 25px;
-        left: -65%;
+        right: -65%;
     }
 
     .decor-discover .heading button.scroll i {
@@ -2030,7 +2061,7 @@ footer .outro .copyright {
     }
 
     .decor-discover .heading button.scroll:hover i {
-        transform: translateX(1.5px);
+        transform: translateX(-1.5px) rotateY(0);
     }
 
     footer {
@@ -2038,21 +2069,21 @@ footer .outro .copyright {
     }
 
     footer .heading h2 {
-        font-size: 21px;
+        font-size: 16px;
     }
 
     footer .heading h4 {
-        font-size: 13px;
+        font-size: 10px;
     }
 
     footer .footer-sep1,
     footer .outro .footer-sep2 {
-        width: 48%;
+        width: 42%;
         margin: 30px auto 10px;
     }
 
     footer .outro {
-        width: 65%;
+        width: 100%;
         max-width: 400px;
         margin: auto;
         flex-wrap: wrap;
@@ -2060,34 +2091,34 @@ footer .outro .copyright {
     }
 
     footer .outro h1 {
-        font-size: 32px;
+        font-size: 27px;
         width: 100%;
         text-align: center;
     }
 
     footer .outro .links {
-        width: 36%;
+        width: 45%;
         height: 110px;
         margin-right: 25px;
         margin-bottom: 0;
-        font-size: 11px;
+        font-size: 8px;
         flex-direction: column;
         justify-content: space-between;
     }
 
     footer .outro .contact {
-        width: 50%;
+        width: 45%;
         height: 110px;
         margin-bottom: 0;
         flex-direction: column;
     }
 
     footer .outro .contact li {
-        width: 100%;
         display: flex;
         align-items: center;
         min-width: 50%;
         justify-content: space-between;
+        width: 100%;
     }
 
     footer .outro .contact li a {
@@ -2100,7 +2131,7 @@ footer .outro .copyright {
         background-color: transparent;
         color: #fff;
         padding: 7px;
-        font-size: 11px;
+        font-size: 8px;
         transform: translate(0, 0);
         width: 90%;
     }
@@ -2110,7 +2141,7 @@ footer .outro .copyright {
     }
 
     footer .outro .footer-sep2 {
-        width: 100px;
+        width: 90px;
         margin-top: 20px;
         margin-bottom: 8px;
     }
@@ -2118,6 +2149,6 @@ footer .outro .copyright {
     footer .outro .copyright {
         width: 100%;
         text-align: center;
-        font-size: 10px;
+        font-size: 7px;
     }
 }

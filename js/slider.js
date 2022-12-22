@@ -7,32 +7,32 @@ let currentDiscoverSlider = 0,
 
 /* slider part start */
 
-function slideTo(order, slider) {
+function slideTo(order, slider, ar=false) {
     if (slider == "discover") {
         $("#discover-slider").css({
-            transform: `translateX(${(100 / discoverSliderLength) * order}%)`,
+            transform: `translateX(${ar? `-`: ``}${(100 / discoverSliderLength) * order}%)`,
         });
         currentDiscoverSlider = order;
     } else if (slider == "decor") {
         $("#decor-slider").css({
-            transform: `translateX(${(100 / decorSliderLength) * order}%)`,
+            transform: `translateX(${ar? `-`: ``}${(100 / decorSliderLength) * order}%)`,
         });
         currentDecorSlider = order;
     }
 }
 
-function slideDiscoverStep() {
+function slideDiscoverStep(ar=false) {
     currentDiscoverSlider == discoverSliderLength - 1
         ? (currentDiscoverSlider = 0)
         : (currentDiscoverSlider += 1);
-    slideTo(currentDiscoverSlider, "discover");
+    slideTo(currentDiscoverSlider, "discover", ar);
 }
 
-function slideDecorStep() {
+function slideDecorStep(ar=false) {
     currentDecorSlider == decorSliderLength - 1
         ? (currentDecorSlider = 0)
         : (currentDecorSlider += 1);
-    slideTo(currentDecorSlider, "decor");
+    slideTo(currentDecorSlider, "decor", ar);
 }
 
 /* slider part end */
