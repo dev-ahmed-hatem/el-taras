@@ -7,32 +7,50 @@ let currentDiscoverSlider = 0,
 
 /* slider part start */
 
-function slideTo(order, slider, ar=false) {
+function slideTo(order, slider, ar = false) {
     if (slider == "discover") {
         $("#discover-slider").css({
-            transform: `translateX(${ar? `-`: ``}${(100 / discoverSliderLength) * order}%)`,
+            transform: `translateX(${ar ? `-` : ``}${
+                (100 / discoverSliderLength) * order
+            }%)`,
         });
         currentDiscoverSlider = order;
     } else if (slider == "decor") {
         $("#decor-slider").css({
-            transform: `translateX(${ar? `-`: ``}${(100 / decorSliderLength) * order}%)`,
+            transform: `translateX(${ar ? `-` : ``}${
+                (100 / decorSliderLength) * order
+            }%)`,
         });
         currentDecorSlider = order;
     }
 }
 
-function slideDiscoverStep(ar=false) {
-    currentDiscoverSlider == discoverSliderLength - 1
-        ? (currentDiscoverSlider = 0)
-        : (currentDiscoverSlider += 1);
-    slideTo(currentDiscoverSlider, "discover", ar);
+function slideDiscoverStep(condition, ar = false) {
+    if (condition == "increase") {
+        currentDiscoverSlider == discoverSliderLength - 1
+            ? (currentDiscoverSlider = 0)
+            : (currentDiscoverSlider += 1);
+        slideTo(currentDiscoverSlider, "discover", ar);
+    } else {
+        currentDiscoverSlider == 0
+            ? (currentDiscoverSlider = discoverSliderLength - 1)
+            : (currentDiscoverSlider -= 1);
+        slideTo(currentDiscoverSlider, "discover", ar);
+    }
 }
 
-function slideDecorStep(ar=false) {
-    currentDecorSlider == decorSliderLength - 1
-        ? (currentDecorSlider = 0)
-        : (currentDecorSlider += 1);
-    slideTo(currentDecorSlider, "decor", ar);
+function slideDecorStep(condition, ar = false) {
+    if (condition == "increase") {
+        currentDecorSlider == decorSliderLength - 1
+            ? (currentDecorSlider = 0)
+            : (currentDecorSlider += 1);
+        slideTo(currentDecorSlider, "decor", ar);
+    } else {
+        currentDecorSlider == 0
+            ? (currentDecorSlider = decorSliderLength - 1)
+            : (currentDecorSlider -= 1);
+        slideTo(currentDecorSlider, "decor", ar);
+    }
 }
 
 /* slider part end */

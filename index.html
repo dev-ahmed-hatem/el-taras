@@ -3,7 +3,16 @@
     <head>
         <meta charset="UTF-8" />
         <link rel="stylesheet" href="./css/style-en.css" />
+        <link rel="icon" type="image/png" href="media/icon.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="keywords"
+            content="Fire door, emergency door, protection door, hotel room door, hotel room door, contracting, finishing, finishing, decoration, fire-resistant, fire-resistant decoration, binding, theaters outside hospitals, government interests"
+        />
+        <meta
+            name="description"
+            content="Shield fire-resistant wooden doors are specially designed to resist fire within a specific time frame of two hours and up to 1100 degrees Celsius. They help to separate, delay fire expansion from one place to another and prevent smoke, as the smoke is much more dangerous."
+        />
         <title>Shield Fire-resistant Doors</title>
     </head>
     <body>
@@ -52,7 +61,7 @@
                 </button>
             </div>
             <div class="images">
-                <img src="media/head1.jpg" alt="" />
+                <img src="media/logo-en.jpg" alt="" />
                 <img src="media/head2.jpg" alt="" />
                 <img src="media/head3.jpg" alt="" />
             </div>
@@ -73,9 +82,9 @@
         </header>
         <span class="separator"></span>
         <div class="intro" id="about">
-            <img src="media/intro.jpg" class="door" alt="" />
+            <img src="media/emergency-2.jpeg" class="door" alt="" />
             <div>
-                <h3>
+                <h3 class="dark-red">
                     Why Shield fire-resistant <br />
                     wooden door?
                 </h3>
@@ -107,17 +116,21 @@
             </div>
             <img src="media/flame.png" class="icon" alt="" />
         </div>
+        <div class="video">
+            <iframe
+                src="https://www.youtube.com/embed/RrlV0aeP4Mg"
+                title="اختبار باب مقاوم للحريق لمده ساعتين بدرجه حراره 1100 درجه"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+            ></iframe>
+        </div>
         <span class="separator"></span>
         <div class="discover" id="discover">
             <div class="overlay"></div>
             <img src="media/top-corner.png" alt="" class="top-corner" />
             <img src="media/bottom-corner.png" alt="" class="bottom-corner" />
             <div class="slider" id="discover-slider">
-                <div>
-                    <img src="media/slider/emergency-5.jpeg" alt="" /><span
-                        >Emergency door</span
-                    >
-                </div>
                 <div>
                     <img src="media/slider/emergency-4.jpg" alt="" /><span
                         >Emergency door</span
@@ -149,32 +162,12 @@
                     >
                 </div>
                 <div>
-                    <img src="media/slider/fire-resistant-6.jpeg" alt="" /><span
-                        >Fire-resistant door</span
-                    >
-                </div>
-                <div>
                     <img src="media/slider/fire-resistant-5.jpeg" alt="" /><span
                         >Fire-resistant door</span
                     >
                 </div>
                 <div>
-                    <img src="media/slider/fire-resistant-4.jpeg" alt="" /><span
-                        >Fire-resistant door</span
-                    >
-                </div>
-                <div>
                     <img src="media/slider/fire-resistant-3.jpeg" alt="" /><span
-                        >Fire-resistant door</span
-                    >
-                </div>
-                <div>
-                    <img src="media/slider/fire-resistant-2.jpeg" alt="" /><span
-                        >Fire-resistant door</span
-                    >
-                </div>
-                <div>
-                    <img src="media/slider/fire-resistant-1.jpeg" alt="" /><span
                         >Fire-resistant door</span
                     >
                 </div>
@@ -189,11 +182,6 @@
                     >
                 </div>
                 <div>
-                    <img src="media/slider/room-3.jpeg" alt="" /><span
-                        >Room door</span
-                    >
-                </div>
-                <div>
                     <img src="media/slider/room-2.jpeg" alt="" /><span
                         >Room door</span
                     >
@@ -201,11 +189,6 @@
                 <div>
                     <img src="media/slider/room-1.jpeg" alt="" /><span
                         >Room door</span
-                    >
-                </div>
-                <div>
-                    <img src="media/slider/hotel-6.jpeg" alt="" /><span
-                        >Hotel door</span
                     >
                 </div>
                 <div>
@@ -224,18 +207,13 @@
                     >
                 </div>
                 <div>
-                    <img src="media/slider/hotel-2.jpeg" alt="" /><span
-                        >Hotel door</span
-                    >
-                </div>
-                <div>
                     <img src="media/slider/hotel-1.jpeg" alt="" /><span
                         >Hotel door</span
                     >
                 </div>
             </div>
             <div class="heading">
-                <h3>
+                <h3 class="dark-red">
                     Discover <br />
                     Our Collection
                 </h3>
@@ -243,13 +221,26 @@
                     Find a variety of products with varying forms, features,
                     specs, and safety ratings.
                 </p>
-                <button onclick="slideDiscoverStep();"><i></i></button>
+                <div>
+                    <button
+                        class="back"
+                        onclick="slideDiscoverStep(condition='decrease');"
+                    >
+                        <i></i>
+                    </button>
+                    <button
+                        class="forward"
+                        onclick="slideDiscoverStep(condition='increase');"
+                    >
+                        <i></i>
+                    </button>
+                </div>
             </div>
         </div>
         <span class="separator"></span>
         <div class="info info-1" id="fire-rated">
             <div class="text">
-                <h3>
+                <h3 class="dark-red">
                     The rating guidance of <br />
                     the doors
                 </h3>
@@ -282,14 +273,14 @@
                     significantly reduce the estimated time.
                 </p>
             </div>
-            <img src="media/fire-doors.jpg" alt="" />
+            <img src="media/fire-doors.jpeg" alt="" />
         </div>
         <div class="info info-2">
             <div class="img-cont">
                 <img src="media/fire-safe.png" alt="" />
             </div>
             <div class="text">
-                <h3>
+                <h3 class="dark-red">
                     How can they help <br />
                     during a fire?
                 </h3>
@@ -322,6 +313,21 @@
                     and deaths in emergency situations
                 </p>
             </div>
+        </div>
+        <div class="qual">
+            <h3 class="dark-red">Certificates And Qualifications</h3>
+            <img class="vertical" src="media/certificates/cer-1.jpeg" alt="" />
+            <img
+                class="horizontal"
+                src="media/certificates/cer-2.jpeg"
+                alt=""
+            />
+            <img class="vertical" src="media/certificates/cer-3.jpeg" alt="" />
+            <img
+                class="horizontal"
+                src="media/certificates/cer-4.jpeg"
+                alt=""
+            />
         </div>
         <span class="separator"></span>
         <div class="decor-sec" id="decoration">
@@ -362,7 +368,7 @@
         <span class="decor-sep"></span>
         <div class="decor-discover">
             <div class="heading">
-                <h3>
+                <h3 class="dark-red">
                     Natural inspiration <br />
                     in our designs
                 </h3>
@@ -371,15 +377,26 @@
                     individual style ..
                 </p>
                 <button class="contact" id="decor-contact">
-                    <span>Contact Us</span>
+                    <a href="https://wa.me/+201066660770" target="blank">
+                        <span>Contact Us</span></a
+                    >
                 </button>
-                <button onclick="slideDecorStep();" class="scroll">
+                <button
+                    onclick="slideDecorStep(condition='increase');"
+                    class="scroll forward"
+                >
+                    <i></i>
+                </button>
+                <button
+                    onclick="slideDecorStep(condition='decrease');"
+                    class="scroll back"
+                >
                     <i></i>
                 </button>
             </div>
             <div class="slider" id="decor-slider">
                 <img src="./media/decor/decor-7.jpg" alt="" />
-                <img src="./media/decor/decor-6.jpg" alt="" />
+                <img src="./media/decor/decor-6.jpeg" alt="" />
                 <img src="./media/decor/decor-5.jpg" alt="" />
                 <img src="./media/decor/decor-4.jpg" alt="" />
                 <img src="./media/decor/decor-3.jpeg" alt="" />

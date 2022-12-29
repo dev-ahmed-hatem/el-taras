@@ -281,7 +281,7 @@ header .marks div span {
     display: block;
     margin-right: auto;
     margin-left: auto;
-    background-color: #ffc350;
+    background-color: #c40001;
     width: 60%;
     height: 5px;
     border-radius: 10px;
@@ -321,6 +321,19 @@ header .marks div span {
 .intro .icon {
     width: 150px;
     margin-top: 125px;
+}
+
+.video {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.video iframe {
+    width: 900px;
+    height: 506px;
 }
 
 .discover {
@@ -409,6 +422,12 @@ header .marks div span {
     width: 410px;
 }
 
+.discover .heading div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .discover .heading button {
     width: 50px;
     height: 50px;
@@ -431,7 +450,6 @@ header .marks div span {
 }
 
 .discover .heading button i {
-    background-image: url("../media/arrow.svg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
@@ -442,8 +460,20 @@ header .marks div span {
     transition: all 0.2s ease-in-out;
 }
 
-.discover .heading button:hover i {
+.discover .heading button.back i {
+    background-image: url("../media/back-arrow.svg");
+}
+
+.discover .heading button.forward i {
+    background-image: url("../media/arrow.svg");
+}
+
+.discover .heading button.forward:hover i {
     transform: translateX(5px);
+}
+
+.discover .heading button.back:hover i {
+    transform: translateX(-5px);
 }
 
 .info {
@@ -489,6 +519,32 @@ header .marks div span {
     width: 300px;
     margin: auto;
     display: block;
+}
+
+.qual {
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.qual h3 {
+    font-size: 45px;
+    margin-bottom: 30px;
+    font-family: Calibri;
+}
+
+.qual img {
+    margin-bottom: 30px;
+}
+
+.qual img.vertical {
+    height: 650px;
+}
+
+.qual img.horizontal {
+    height: 450px;
 }
 
 .decor-sec {
@@ -628,16 +684,28 @@ span.decor-sep {
     transition: all 0.2s ease-in-out;
 }
 
+.decor-discover .heading button.contact a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #c40001;
+    transition: all 0.2s ease-in-out;
+}
+
 .decor-discover .heading button.contact:hover {
-    color: #0076bf;
     border: 1px solid #0076bf;
     background-color: transparent;
 }
 
+.decor-discover .heading button.contact:hover a {
+    color: #0076bf;
+}
+
 .decor-discover .heading button.scroll {
     position: absolute;
-    right: -25px;
-    top: 50%;
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
@@ -654,13 +722,22 @@ span.decor-sep {
     transition: all 0.05s ease-in-out;
 }
 
+.decor-discover .heading button.scroll.forward {
+    right: -25px;
+    top: 50%;
+}
+
+.decor-discover .heading button.scroll.back {
+    left: -25px;
+    top: 50%;
+}
+
 .decor-discover .heading button.scroll:active {
     box-shadow: -1px 1px 4px #636363;
     transform: translate(-1px, calc(-50% + 1px));
 }
 
 .decor-discover .heading button.scroll i {
-    background-image: url("../media/arrow.svg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
@@ -671,8 +748,20 @@ span.decor-sep {
     transition: all 0.2s ease-in-out;
 }
 
-.decor-discover .heading button.scroll:hover i {
+.decor-discover .heading button.scroll.forward i {
+    background-image: url("../media/arrow.svg");
+}
+
+.decor-discover .heading button.scroll.back i {
+    background-image: url("../media/back-arrow.svg");
+}
+
+.decor-discover .heading button.scroll.forward:hover i {
     transform: translateX(5px);
+}
+
+.decor-discover .heading button.scroll.back:hover i {
+    transform: translateX(-5px);
 }
 
 .decor-discover .slider {
@@ -854,6 +943,12 @@ footer .outro .copyright {
     font-size: 12px;
 }
 
+/* Modifications */
+
+.dark-red {
+    color: #c40001 !important;
+}
+
 @media screen and (min-width: 1280px) and (max-width: 1400px) {
     header {
         height: 700px;
@@ -977,6 +1072,11 @@ footer .outro .copyright {
         width: 120px;
     }
 
+    .video iframe {
+        width: 670px;
+        height: 377px;
+    }
+
     .discover {
         margin: 50px 0;
         height: 560px;
@@ -1053,6 +1153,18 @@ footer .outro .copyright {
         width: 250px;
     }
 
+    .qual h3 {
+        font-size: 40px;
+    }
+
+    .qual img.vertical {
+        height: 550px;
+    }
+
+    .qual img.horizontal {
+        height: 350px;
+    }
+
     .decor-sec {
         margin: 50px 0 175px;
     }
@@ -1108,7 +1220,6 @@ footer .outro .copyright {
     .decor-discover .heading button.scroll {
         width: 40px;
         height: 40px;
-        right: -20px;
     }
 
     .decor-discover .heading button.scroll i {
@@ -1352,8 +1463,13 @@ footer .outro .copyright {
         width: 65px;
         position: absolute;
         top: 30px;
-        right: 30px;
+        right: 0;
         margin-top: 0;
+    }
+
+    .video iframe {
+        width: 570px;
+        height: 320px;
     }
 
     .discover {
@@ -1438,6 +1554,18 @@ footer .outro .copyright {
         width: 150px;
     }
 
+    .qual h3 {
+        font-size: 28px;
+    }
+
+    .qual img.vertical {
+        height: 480px;
+    }
+
+    .qual img.horizontal {
+        height: 280px;
+    }
+
     .decor-sec {
         margin: 30px 0 110px;
         height: 300px;
@@ -1516,7 +1644,6 @@ footer .outro .copyright {
     .decor-discover .heading button.scroll {
         width: 30px;
         height: 30px;
-        right: -15px;
     }
 
     .decor-discover .heading button.scroll i {
@@ -1594,7 +1721,7 @@ footer .outro .copyright {
         background-color: transparent;
         color: #fff;
         padding: 7px;
-        font-size: 12px;
+        font-size: 14px;
         transform: translate(0, 0);
         width: 90%;
     }
@@ -1810,6 +1937,11 @@ footer .outro .copyright {
         margin-top: 0;
     }
 
+    .video iframe {
+        width: 350px;
+        height: 300px;
+    }
+
     .discover {
         margin: 30px 0 10px;
         height: 500px;
@@ -1854,6 +1986,10 @@ footer .outro .copyright {
         font-size: 11px;
         width: 200px;
         margin-bottom: 8px;
+    }
+
+    .discover .heading div {
+        transform: translateX(-30px);
     }
 
     .discover .heading button {
@@ -1922,6 +2058,18 @@ footer .outro .copyright {
         margin-bottom: 15px;
     }
 
+    .qual h3 {
+        font-size: 24px;
+    }
+
+    .qual img.vertical {
+        height: 300px;
+    }
+
+    .qual img.horizontal {
+        height: 160px;
+    }
+
     .decor-sec {
         margin: 30px 0 100px;
         height: 170px;
@@ -1988,6 +2136,7 @@ footer .outro .copyright {
     .decor-discover .slider {
         top: 130px;
         right: 0;
+        height: unset;
     }
 
     .decor-discover .slider img {
@@ -2017,11 +2166,21 @@ footer .outro .copyright {
         font-size: 12px;
     }
 
-    .decor-discover .heading button.scroll {
+    .decor-discover .heading button.forward.scroll,
+    .decor-discover .heading button.back.scroll {
         width: 25px;
-        top: 80%;
         height: 25px;
-        left: -65%;
+        top: 230%;
+        z-index: 5;
+    }
+
+    .decor-discover .heading button.forward.scroll {
+        left: unset;
+        right: 12px;
+    }
+
+    .decor-discover .heading button.back.scroll {
+        left: 12px;
     }
 
     .decor-discover .heading button.scroll i {
@@ -2052,7 +2211,7 @@ footer .outro .copyright {
     }
 
     footer .outro {
-        width: 65%;
+        width: 100%;
         max-width: 400px;
         margin: auto;
         flex-wrap: wrap;
@@ -2076,7 +2235,7 @@ footer .outro .copyright {
     }
 
     footer .outro .contact {
-        width: 50%;
+        width: 55%;
         height: 110px;
         margin-bottom: 0;
         flex-direction: column;
@@ -2100,7 +2259,7 @@ footer .outro .copyright {
         background-color: transparent;
         color: #fff;
         padding: 7px;
-        font-size: 11px;
+        font-size: 13px;
         transform: translate(0, 0);
         width: 90%;
     }
