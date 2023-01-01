@@ -1943,8 +1943,8 @@ footer .outro .copyright {
     }
 
     .discover {
-        margin: 30px 0 10px;
-        height: 500px;
+        margin: 30px 0 20px;
+        height: 570px;
     }
 
     .discover .overlay {
@@ -1956,20 +1956,24 @@ footer .outro .copyright {
         width: 125px;
         top: 0;
         left: 0;
-        transform: rotateZ(-90deg);
+        transform: rotateZ(-90deg) rotateY(180deg);
     }
 
     .discover .bottom-corner {
         width: 125px;
         top: 0;
         right: 0;
+        transform: rotateZ(180deg) rotateY(180deg);
     }
 
     .discover .heading {
         top: 5%;
-        right: 44%;
+        right: 50%;
         transform: translateX(50%);
         height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .discover .heading h3 {
@@ -1989,27 +1993,31 @@ footer .outro .copyright {
     }
 
     .discover .heading div {
-        transform: translateX(-30px);
+        width: 350px;
+        position: absolute;
+        top: 490%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .discover .heading button {
-        width: 25px;
-        height: 25px;
+        width: 50px;
+        height: 50px;
         background-color: transparent;
         box-shadow: none;
     }
 
     .discover .heading button i {
-        width: 20px;
-        height: 20px;
+        width: 50px;
+        height: 50px;
     }
 
     .discover .heading button.back i {
-        background-image: url("../media/back-arrow\ -\ red.svg");
+        background-image: url("../media/back-arrow-red.png");
     }
-    
+
     .discover .heading button.forward i {
-        background-image: url("../media/arrow\ -\ red.svg");
+        background-image: url("../media/arrow-red.png");
     }
 
     .discover .heading button.back:hover i,
@@ -2152,7 +2160,7 @@ footer .outro .copyright {
     }
 
     .decor-discover .slider {
-        top: 130px;
+        top: 160px;
         right: 0;
         height: unset;
     }
@@ -2186,9 +2194,9 @@ footer .outro .copyright {
 
     .decor-discover .heading button.forward.scroll,
     .decor-discover .heading button.back.scroll {
-        width: 25px;
-        height: 25px;
-        top: 100%;
+        width: 50px;
+        height: 50px;
+        top: 115%;
         z-index: 5;
         background-color: transparent;
         box-shadow: none;
@@ -2196,24 +2204,24 @@ footer .outro .copyright {
 
     .decor-discover .heading button.forward.scroll {
         left: unset;
-        right: 12px;
+        right: 25px;
     }
 
     .decor-discover .heading button.back.scroll {
-        left: 12px;
+        left: 25px;
     }
 
     .decor-discover .heading button.scroll i {
-        width: 20px;
-        height: 20px;
+        width: 50px;
+        height: 50px;
     }
 
     .decor-discover .heading button.scroll.forward i {
-        background-image: url("../media/arrow\ -\ red.svg");
+        background-image: url("../media/arrow-red.png");
     }
-    
+
     .decor-discover .heading button.scroll.back i {
-        background-image: url("../media/back-arrow\ -\ red.svg");
+        background-image: url("../media/back-arrow-red.png");
     }
 
     .decor-discover .heading button.scroll:hover i {
