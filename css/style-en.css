@@ -870,7 +870,7 @@ footer .outro .contact {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 150px;
+    width: 200px;
 }
 
 footer .outro .contact li {
@@ -905,7 +905,17 @@ footer .outro .contact span::before {
     border-bottom-color: #000;
 }
 
-footer .outro .contact li a {
+footer .outro .contact li span a {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer .outro .contact li > a {
     display: block;
     background-position: center center;
     background-size: 100% 100%;
@@ -913,19 +923,25 @@ footer .outro .contact li a {
     cursor: pointer;
 }
 
-footer .outro .contact li a:first-child {
+footer .outro .contact li:first-child > a {
     width: 24px;
     height: 20px;
     background-image: url(../media/email.png);
 }
 
-footer .outro .contact li:nth-child(2) a {
+footer .outro .contact li:nth-child(2) > a {
+    width: 25px;
+    height: 25px;
+    background-image: url(../media/facebook.png);
+}
+
+footer .outro .contact li:nth-child(3) > a {
     width: 18px;
     height: 21px;
     background-image: url(../media/location.png);
 }
 
-footer .outro .contact li:nth-child(3) a {
+footer .outro .contact li:nth-child(4) > a {
     width: 21px;
     height: 21px;
     background-image: url(../media/phone.png);
@@ -1258,7 +1274,7 @@ footer .outro .copyright {
         font-size: 14px;
     }
 
-    footer .outro .contact li a {
+    footer .outro .contact li > a {
         transform: scale(0.96);
     }
 
@@ -1711,7 +1727,7 @@ footer .outro .copyright {
         justify-content: space-between;
     }
 
-    footer .outro .contact li a {
+    footer .outro .contact li > a {
         transform: scale(0.76);
     }
 
@@ -2285,7 +2301,7 @@ footer .outro .copyright {
         justify-content: space-between;
     }
 
-    footer .outro .contact li a {
+    footer .outro .contact li > a {
         transform: scale(0.66);
     }
 
