@@ -13,6 +13,11 @@
     src: url(./Fonts/Cairo-VariableFont.ttf);
 }
 
+@font-face {
+    font-family: "proxima";
+    src: url(./Fonts/Proxima\ Nova\ Font.otf);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -325,6 +330,46 @@ header .marks div span {
     margin-top: 125px;
 }
 
+.categories {
+    width: 80%;
+    margin: 100px auto;
+}
+
+.categories h3 {
+    font-family: "Almarai";
+    font-size: 45px;
+}
+
+.categories ul {
+    display: flex;
+    list-style: none;
+    width: 80%;
+    height: 120px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto auto;
+}
+
+.categories ul li {
+    width: 30%;
+    height: 100%;
+    border-radius: 8px;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    border: 1px solid #0076bf;
+    font-family: "cairo";
+}
+
+.categories ul li span {
+    font-weight: bold;
+    font-style: italic;
+}
+
 .video {
     width: auto;
     display: flex;
@@ -359,6 +404,11 @@ header .marks div span {
     z-index: 1;
 }
 
+.discover-metal .overlay {
+    left: unset;
+    right: 0;
+}
+
 .discover .top-corner {
     position: absolute;
     top: 0;
@@ -366,6 +416,12 @@ header .marks div span {
     width: 450px;
     z-index: 3;
     transform: rotateY(180deg);
+}
+
+.discover-metal .top-corner {
+    left: unset;
+    right: -4px;
+    transform: rotateY(0);
 }
 
 .discover .bottom-corner {
@@ -377,6 +433,12 @@ header .marks div span {
     transform: rotateY(180deg);
 }
 
+.discover-metal .bottom-corner {
+    left: unset;
+    right: -50px;
+    transform: rotateY(0);
+}
+
 .discover .slider {
     display: flex;
     justify-content: space-between;
@@ -384,6 +446,11 @@ header .marks div span {
     transition: all 0.2s ease-in-out;
     position: absolute;
     left: 625px;
+}
+
+.discover-metal .slider {
+    left: unset;
+    right: 625px;
 }
 
 .discover .slider div {
@@ -409,6 +476,12 @@ header .marks div span {
     position: absolute;
     left: 200px;
     z-index: 5;
+}
+
+.discover-metal .heading {
+    left: unset;
+    bottom: 60px;
+    right: 240px;
 }
 
 .discover .heading h3 {
@@ -491,17 +564,19 @@ header .marks div span {
 }
 
 .info .text h3 {
-    font-size: 40px;
+    font-size: 45px;
     color: #0076bf;
     margin-bottom: 30px;
-    font-family: almarai;
+    font-family: calibri;
+    direction: ltr;
 }
 
 .info .text p {
-    font-family: cairo;
-    font-size: 18px;
+    font-family: proxima;
+    font-size: 20px;
     margin-bottom: 15px;
     text-align: justify;
+    direction: ltr;
 }
 
 .info-1 .text p {
@@ -963,6 +1038,11 @@ footer .outro .copyright {
     font-family: kufam;
     font-weight: lighter;
     font-size: 12px;
+    text-align: center;
+}
+
+footer .outro .copyright a {
+    color: #ffffff;
 }
 
 /* Modifications */
@@ -1093,6 +1173,19 @@ footer .outro .copyright {
 
     .intro .icon {
         width: 120px;
+    }
+
+    .categories h3 {
+        font-size: 43px;
+    }
+
+    .categories ul {
+        height: 100px;
+    }
+
+    .categories ul li {
+        font-size: 18px;
+        padding: 30px;
     }
 
     .video iframe {
@@ -1500,6 +1593,26 @@ footer .outro .copyright {
         top: 25px;
         left: 0;
         margin-top: 0;
+        display: none;
+    }
+
+    .categories {
+        margin: 50px auto;
+        width: 70%;
+    }
+
+    .categories h3 {
+        font-size: 23px;
+    }
+
+    .categories ul {
+        height: 80px;
+    }
+
+    .categories ul li {
+        width: 32%;
+        font-size: 13px;
+        padding: 20px;
     }
 
     .video iframe {
@@ -1528,6 +1641,11 @@ footer .outro .copyright {
         left: 120px;
     }
 
+    .discover-metal .heading {
+        left: unset;
+        right: 135px;
+    }
+
     .discover .heading h3 {
         font-size: 28px;
     }
@@ -1554,6 +1672,11 @@ footer .outro .copyright {
     .discover .slider {
         height: 400px;
         left: 390px;
+    }
+
+    .discover-metal .slider {
+        right: 390px;
+        left: unset;
     }
 
     .discover .slider div img {
@@ -1913,6 +2036,7 @@ footer .outro .copyright {
 
     header .images img:first-child {
         width: 100%;
+        border-radius: 10px;
     }
 
     header .images img:not(:first-child) {
@@ -1981,6 +2105,29 @@ footer .outro .copyright {
         margin-top: 0;
     }
 
+    .categories {
+        margin: 20px auto;
+        width: 70%;
+    }
+
+    .categories h3 {
+        font-size: 23px;
+    }
+
+    .categories ul {
+        flex-direction: column;
+        height: fit-content;
+        margin-top: 20px;
+    }
+
+    .categories ul li {
+        width: 180px;
+        height: 100px;
+        margin: 10px auto;
+        font-size: 13px;
+        padding: 20px;
+    }
+
     .video iframe {
         width: 350px;
         height: 300px;
@@ -1996,23 +2143,32 @@ footer .outro .copyright {
         display: none;
     }
 
-    .discover .top-corner {
+    .discover .top-corner,
+    .discover-metal .top-corner {
         width: 125px;
         top: 0;
         left: 0;
+        right: unset;
         transform: rotateZ(-90deg);
     }
 
-    .discover .bottom-corner {
+    .discover .bottom-corner,
+    .discover-metal .bottom-corner {
         width: 125px;
         top: 0;
         right: 0;
         transform: rotateY(0);
     }
 
-    .discover .heading {
+    .discover-metal .bottom-corner {
+        left: unset;
+    }
+
+    .discover .heading,
+    .discover-metal .heading {
         top: 3%;
-        right: 50%;
+        right: unset;
+        left: unset;
         transform: translateX(50%);
         width: 240px;
         height: 100px;
@@ -2027,9 +2183,9 @@ footer .outro .copyright {
         margin-bottom: 8px;
     }
 
-    .discover .heading h3 br {
+    /* .discover .heading h3 br {
         display: none;
-    }
+    } */
 
     .discover .heading p {
         font-size: 9px;
@@ -2077,10 +2233,16 @@ footer .outro .copyright {
         box-shadow: none;
     }
 
-    .discover .slider {
+    .discover .slider,
+    .discover-metal .slider {
         height: 330px;
         top: 160px;
         left: 0;
+    }
+
+    .discover-metal .slider {
+        right: 0;
+        left: unset;
     }
 
     .discover .slider div img {
@@ -2193,7 +2355,7 @@ footer .outro .copyright {
     }
 
     .decor-discover {
-        height: 360px;
+        height: 430px;
         margin: 30px 0;
     }
 
@@ -2202,13 +2364,13 @@ footer .outro .copyright {
         left: 50%;
         transform: translateX(-50%);
         flex-wrap: wrap;
-        height: 110px;
+        height: 200px;
         padding: 0 10px;
         justify-content: start;
     }
 
     .decor-discover .slider {
-        top: 130px;
+        top: 220px;
         left: 0;
         height: unset;
     }
@@ -2219,25 +2381,50 @@ footer .outro .copyright {
     }
 
     .decor-discover .heading h3 {
-        font-size: 16px;
+        font-size: 15px;
         margin-right: 5px;
         margin-bottom: 15px;
-        max-width: 180px;
+        max-width: 140px;
         height: 100%;
     }
 
     .decor-discover .heading p {
-        font-size: 10px;
-        width: 200px;
+        font-size: 11px;
+        width: 145px;
         height: 30px;
         margin-bottom: 5px;
         justify-content: space-between;
+        margin-top: 7px;
     }
 
     .decor-discover .heading button.contact {
-        width: 100px;
+        width: 180px;
         height: 30px;
-        font-size: 14px;
+        font-size: 15px;
+        position: absolute;
+        top: 30%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .decor-discover .heading button.contact::before,
+    .decor-discover .heading button.contact::after {
+        position: absolute;
+        font-size: 15px;
+        direction: ltr;
+        color: #000;
+    }
+
+    .decor-discover .heading button.contact::before {
+        content: "+20 106 666 0770";
+        top: 150%;
+        right: 28px;
+    }
+
+    .decor-discover .heading button.contact::after {
+        content: "service@eltaras.com";
+        top: 230%;
+        right: 18px;
     }
 
     .decor-discover .heading button.forward.scroll,
